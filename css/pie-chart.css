@@ -1,0 +1,48 @@
+#pie-chart-area {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5%;
+    right: 24px;
+    max-width: 200px;
+    margin-left: auto;
+}
+
+.pie-svg {
+    position: static;
+}
+
+.pie-legend-svg {
+    position: static;
+}
+
+.pie-group path {
+    stroke-width: 1px;
+    stroke-linejoin: round;
+    stroke: #989898;
+
+}
+
+.legend-title {
+    margin: 2em;
+}
+
+.diesel {
+    fill: #eeee9a;
+}
+
+.gasoline {
+    fill:#bbbb70;
+}
+
+.electric {
+    fill: darkseagreen;
+}
+
+.hybrid {
+    fill: purple;
+}
+
+.others {
+    fill: teal;
+}

@@ -1,0 +1,82 @@
+/*.countries {*/
+/*    fill: none;*/
+/*}*/
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    /*overflow: clip;*/
+}
+
+
+#map-chart-area {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*MAP STYLING*/
+.paths path {
+    fill: #ddd;
+    stroke: black;
+    stroke-width: 0.2px;
+    stroke-linejoin: round;
+}
+
+.hexGraph path {
+    opacity: 40%;
+    stroke: #000000d6;
+}
+
+.filter_icon {
+    fill: white;
+    stroke-width: 1px;
+}
+
+.graticules path {
+    fill: none;
+    stroke: #989898;
+    stroke-width: 0.2px;
+    stroke-linejoin: round;
+}
+
+
+/*MENU STYLING*/
+.container {
+    padding: 12px;
+    width: auto;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    background-color: darkgray;
+    transition: height 2.5s ease;
+}
+
+.filter-block {
+    position: relative;
+    background-color: lightgrey;
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.filter-block select {
+    margin-top: 12px;
+}
+
+.container.openned {
+    display: flex;
+}
+
+
+
+.navbar-menus {
+    margin-top: 1em;
+    position: absolute;
+}
+
+.menu-slider {
+    margin-top: 7px;
+}
