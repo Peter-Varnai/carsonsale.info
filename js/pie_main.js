@@ -1,4 +1,4 @@
-const WIDTH = 200
+const WIDTH = 160
 
 
 const height = Math.min(WIDTH, 500);
@@ -15,21 +15,6 @@ d3.select("#pie-chart-area").append("p")
     .text("Distribution of fuel types in selection")
     .attr("class", "legend-title")
 
-
-const pieSvg = d3.select("#pie-chart-area").append("svg")
-    .attr("width", WIDTH)
-    .attr("height", height)
-    .attr("class", "pie-svg")
-    .attr("viewBox", [-WIDTH / 2, -height / 2, WIDTH, height])
-    .attr("style", "max-width: 100%; height: auto;");
-
-
-const pieLegendSvg = d3.select("#pie-chart-area").append("svg")
-    .attr("width", 90)
-    .attr("height", 245)
-    .attr("class", "pie-legend-svg")
-
-
 const arc = d3.arc()
     .cornerRadius(2)
     .innerRadius(12)
@@ -44,6 +29,8 @@ function removePie() {
     d3.selectAll(".piePath").transition(t).remove()
     d3.selectAll(".pieLegend").transition(t).attr("transform", "scale(0)")
     d3.selectAll(".pieLegend").transition(t).remove()
+    d3.selectAll(".pie-legend-svg").remove()
+    d3.selectAll(".pieDiv").remove()
 }
 
 
@@ -58,7 +45,7 @@ function fuelTypeCheck(fType) {
     } else if (fType === "Electric") {
         return "electric";
     } else {
-        console.log(fType)
+        // console.log(fType)
         return "others";
     }
 }
@@ -91,10 +78,27 @@ function fuelTypeDataCorrector(map) {
 
 
 function addPie(dataIn) {
+
+    const fuelTypes = []
     for (const key of dataIn.keys()) {
-        const fuelTypeGroupData = d3.group(dataIn.get(key), d => d.fuel_type)
+        const data = dataIn.get(key)
+        const carManufacturer = data[0]['manufacturer']
+        const pieDiv = d3.select("#pie-chart-area")
+            .append('div')
+            .attr('class', 'pieDiv')
+
+        const pieSvg = pieDiv.append("svg")
+            .attr("width", WIDTH)
+            .attr("height", height)
+            .attr("class", "pie-svg")
+            .attr("viewBox", [-WIDTH / 2, -height / 2, WIDTH, height])
+            .attr("style", "max-width: 100%; height: auto;")
+
+
+        const fuelTypeGroupData = d3.group(data, d => d.fuel_type)
         const aggregatedData = Array.from(fuelTypeDataCorrector(fuelTypeGroupData).entries())
             .map(([fuelType, aggData]) => {
+                fuelTypes.includes(fuelType) ? undefined : fuelTypes.push(fuelType)
                 return {
                     fuel_type: fuelType,
                     noOnSale: aggData.length,
@@ -102,6 +106,7 @@ function addPie(dataIn) {
                     average_price: d3.mean(aggData, d => d.price),
                 }
             })
+
 
         pieSvg.append("g")
             .attr("class", "pie-group")
@@ -115,29 +120,6 @@ function addPie(dataIn) {
             .transition().duration(300).delay((d, i) => i * 120)
             .attr("transform", "scale(1)")
 
-        let legends = pieLegendSvg.append("g")
-            .selectAll(".legends")
-            .data(aggregatedData)
-
-        let legend = legends
-            .enter()
-            .append("g")
-            .attr("class", d => fuelTypeCheck(d.fuel_type) + " pieLegend")
-            .attr("transform", function (d, i) {
-                return `translate(12, ${(i + 1) * 30})`
-            })
-
-        legend.append("text")
-            .text(d => fuelTypeCheck(d.fuel_type))
-            .attr("fill", "black")
-            .attr("transform", "translate(18,5)")
-
-        legend.append("circle")
-            .attr("r", 10)
-
-        legend.attr("opacity", 0)
-            .transition().duration(300).delay((d, i) => i * 200)
-            .attr("opacity", 1)
 
         pieSvg.append("g")
             .attr("font-family", "sans-serif")
@@ -156,5 +138,39 @@ function addPie(dataIn) {
             .attr("opacity", 0)
             .transition().duration(300).delay((d, i) => i * 200)
             .attr("opacity", 1)
+
+        pieDiv.append('p').text(carManufacturer)
+            .attr("class", "smaller-legend-title")
     }
+
+
+    // ADDING LEGEND
+    const pieLegendSvg = d3.select("#pie-chart-area").append("svg")
+        .attr("width", 90)
+        .attr("height", 245)
+        .attr("class", "pie-legend-svg")
+
+    let legends = pieLegendSvg.append("g")
+        .selectAll(".legends")
+        .data(fuelTypes)
+
+    let legend = legends
+        .enter()
+        .append("g")
+        .attr("class", d => fuelTypeCheck(d) + " pieLegend")
+        .attr("transform", function (d, i) {
+            return `translate(12, ${(i + 1) * 30})`
+        })
+
+    legend.append("text")
+        .text(d => fuelTypeCheck(d))
+        .attr("fill", "black")
+        .attr("transform", "translate(18,5)")
+
+    legend.append("circle")
+        .attr("r", 10)
+
+    legend.attr("opacity", 0)
+        .transition().duration(300).delay((d, i) => i * 200)
+        .attr("opacity", 1)
 }

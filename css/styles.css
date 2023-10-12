@@ -19,11 +19,12 @@ body {
 
 /*MAP STYLING*/
 .paths path {
-    fill: #ddd;
-    stroke: black;
+    fill: grey;
+    stroke: #555;
     stroke-width: 0.2px;
     stroke-linejoin: round;
 }
+
 
 .hexGraph path {
     opacity: 40%;
@@ -52,6 +53,14 @@ body {
     flex-direction: column;
     background-color: darkgray;
     transition: height 2.5s ease;
+}
+
+.row .row {
+    margin: 4px;
+}
+
+.row label {
+    margin: 0 4px;
 }
 
 .filter-block {

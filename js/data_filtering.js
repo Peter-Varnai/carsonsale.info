@@ -1,10 +1,6 @@
 // jQUERY ELEMENTS
 
 
-$('#car-brands')
-    .on('change', () =>
-        update())
-
 $('#fuel-type')
     .on('change', () =>
         update())
@@ -34,6 +30,7 @@ $('#mileage-slider').slider({
         $('#mileageLavel1').text(ui.values[0] == 0 ? 'New' : ui.values[0])
         $('#mileageLavel2').text(ui.values[1])
         update()
+
     }
 })
 
@@ -51,77 +48,65 @@ function refreshSliders(priceMin, priceMax, mileageMin, mileageMax) {
 
 let MAP_WIDTH = 500
 let MAP_HEIGHT = 300
-const dataLimitTo = 1200
 
 
-const promises = [
-    d3.json("data/concentrated europe map.json"),
-    d3.csv('data/cars_on_sale.csv'),
-]
+function handleCheckbox() {
+    let selectedNames = []
+    let checkboxes = document.getElementsByName("names")
+    let checkedCount = 0;
+
+    for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            checkedCount++;
+        }
+        if (checkedCount > 2) {
+            checkboxes[i].checked = false;
+        }
+    }
+
+    for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            selectedNames.push(checkboxes[i].value)
+        }
+    }
+    const url = `https://carsonsale-api.vercel.app/${selectedNames.join(",")}`
+    // const url = `http://127.0.0.1:8000/${selectedNames.join(",")}`
+
+    const promises = [
+        d3.json(url),
+        d3.json("data/concentrated europe map.json")
+    ]
+
+    Promise.all(promises).then(function (data) {
+        carsMapData = data[0]['data']
+        activeCC = data[0]['cc']
+        removeMap()
+        mapData = data[1]
+        drawMap(activeCC)
+        update()
+    })
+}
 
 
-// const path = d3.geoPath().projection(projection);
-Promise.all(promises).then(function (data) {
-    mapData = data[0]
-    carsMapData = data[1]
-    drawMap()
-    update()
-});
-
+handleCheckbox()
 
 function update() {
     const fuel = $('#fuel-type').val()
-    const brand = $('#car-brands').val()
-    const price = $('#price-slider').slider('values')
-    const mileage = $('#mileage-slider').slider('values')
-
 
     // FILTER DATA
     const fuelFilData = dataFilMenu(fuel, "fuel_type", carsMapData)
-    const brandFilData = dataFilMenu(brand, "manufacturer", fuelFilData)
-    const priceFilData = dataFilRange(price, 'price', brandFilData)
-    const mileageFilData = dataFilRange(mileage, "mileage", priceFilData)
-
 
     // TRANSFORM DATA
-    const groupedData = d3.group(mileageFilData, d => d.manufacturer)
-    convertStrToNum(groupedData)
-
+    const groupedData = d3.group(fuelFilData, d => d.manufacturer)
 
     // GRAPHS
     removeHexGraph()
     addHexGraph(groupedData)
     removePie()
     addPie(groupedData)
+
 }
 
-
-function limitToNumber(data) {
-    // LIMITING DATA TO 1200
-    // const limitedRandArray = []
-    const limitedRandDict = {}
-    data.forEach((d, cc) => {
-        const newArray = getRandomElements(d, dataLimitTo)
-        // limitedRandArray.push(...newArray)
-        limitedRandDict[cc] = newArray
-    })
-}
-
-function getRandomElements(arr, numElements) {
-    const result = []
-    if (arr.length <= dataLimitTo) {
-        return arr
-    } else {
-        for (let i = 0; i < numElements; i++) {
-            let randomIndex = Math.floor(Math.random() * arr.length)
-            while (result.includes(arr[randomIndex])) {
-                randomIndex = Math.floor(Math.random() * arr.length)
-            }
-            result.push(arr[randomIndex])
-        }
-        return result
-    }
-}
 
 function convertStrToNum(data) {
     for (const key of data.keys()) {
@@ -146,9 +131,3 @@ function dataFilMenu(mValue, filterCol, data) {
     }
 }
 
-
-function dataFilRange(mValue, filterCol, data) {
-    return data.filter(d => {
-        return d[filterCol] >= mValue[0] && d[filterCol] <= mValue[1]
-    })
-}

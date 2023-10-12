@@ -18,13 +18,48 @@ const paths = mapMaiGroup.append('g')
     .attr('class', 'paths')
 
 
-function drawMap() {
+// EMPTY COUNTRIES PATTERN
+mapSvg.append('pattern')
+    .attr('id', 'emptyCountryPattern')
+    .attr('patternUnits', 'userSpaceOnUse')
+    .attr('width', '20')
+    .attr('height', '20')
+
+
+mapSvg.select('pattern')
+    .append('rect')
+    .attr('width', 30)
+    .attr('height', 30)
+    .attr('fill', 'white')
+
+mapSvg.select('pattern')
+    .append('line')
+    .attr('x1', 0)
+    .attr('y1', 0)
+    .attr('x2', 30)
+    .attr('y2', 30)
+    .attr('stroke', 'black')
+    .attr('stroke-width', 1)
+    .attr('opacity', 0.1)
+
+function drawMap(activeList) {
     paths.selectAll("path")
         .data(topojson.feature(mapData, mapData.objects.ne_10m_admin_0_countries).features)
         .enter()
         .append("path")
         .attr("d", path)
-        .attr("class", "map")
+        .attr('class', d => d.properties.ISO_A2)
+        // .style("fill", d => activeList.includes(d.properties.ISO_A2) ? 'rgb(244, 244, 244)' : 'url(#emptyCountryPattern')
+        .style("fill", d => {
+            // activeList.includes(d.properties.ISO_A2) ? console.log(d.properties.ISO_A2) : console.log(`not found:              ${d.properties.ISO_A2}`)
+            return activeList.includes(d.properties.ISO_A2) ? 'rgb(244, 244, 244)' : 'url(#emptyCountryPattern'
+        })
+        .style('stroke', 'black')
+}
+
+
+function removeMap() {
+    paths.selectAll('path').remove()
 }
 
 
@@ -115,7 +150,7 @@ function addHexGraph(data) {
                 return d
             }
         )
-        const radius = d3.scaleSqrt([0, d3.max(bin, d => d.length)], [0, hexbin.radius() * Math.SQRT2])
+        const radius = d3.scaleSqrt([0, d3.max(bin, d => d.length)], [2, hexbin.radius() * Math.SQRT2 + 2])
         hexGroup.append("g")
             .attr("class", `${key} hexGraph`)
             .selectAll("path")

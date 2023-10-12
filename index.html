@@ -35,7 +35,6 @@
             <div class="menu-slider" id="price-slider"></div>
         </label>
     </div>
-
     <div class="filter-block" style="display: none">
         <label>Mileage:
             <span id="mileageLavel1">new</span>
@@ -57,127 +56,171 @@
     </div>
     <div class="filter-block">
         <label>Filter by car brand:<br>
-            <select name="cars" id="car-brands">
-                <option value="All">All</option>
-                <optgroup label="German cars">
-                    <option value="Audi">Audi</option>
-                    <option selected value="BMW">BMW</option>
-                    <option value="Mercedes-Benz">Mercedes-Benz</option>
-                    <option value="Opel">Opel</option>
-                    <option value="VW">VW</option>
-                    <option value="Alpina">Alpina</option>
-                    <option value="Maybach">Maybach</option>
-                    <option value="Porsche">Porsche</option>
-                    <option value="Smart">Smart</option>
-                </optgroup>
-                <optgroup label="Italian cars">
-                    <option value="Fiat">Fiat</option>
-                    <option value="Abarth">Abarth</option>
-                    <option value="Alfa Romeo">Alfa Romeo</option>
-                    <option value="Casalini">Casalini</option>
-                    <option value="Ferrari">Ferrari</option>
-                    <option value="Lamborghini">Lamborghini</option>
-                    <option value="Lancia">Lancia</option>
-                    <option value="Maserati">Maserati</option>
-                    <option value="Tazzari">Tazzari</option>
-                </optgroup>
-                <optgroup label="US cars">
-                    <option value="Ford">Ford</option>
-                    <option value="Buick">Buick</option>
-                    <option value="Cadillac">Cadillac</option>
-                    <option value="Chevrolet">Chevrolet</option>
-                    <option value="Chevrolet / Daewoo">Chevrolet / Daewoo</option>
-                    <option value="Chrysler">Chrysler</option>
-                    <option value="Corvette">Corvette</option>
-                    <option value="Dodge">Dodge</option>
-                    <option value="GMC">GMC</option>
-                    <option value="Hummer">Hummer</option>
-                    <option value="Jeep">Jeep</option>
-                    <option value="Lincoln">Lincoln</option>
-                    <option value="Mercury">Mercury</option>
-                    <option value="Pontiac">Pontiac</option>
-                    <option value="Tesla">Tesla</option>
-                </optgroup>
-                <optgroup label="South Korean cars">
-                    <option value="Hyundai">Hyundai</option>
-                    <option value="KIA">KIA</option>
-                    <option value="SsangYong">SsangYong</option>
-                </optgroup>
-                <optgroup label="Japanese cars">
-                    <option value="Mazda">Mazda</option>
-                    <option value="Toyota">Toyota</option>
-                    <option value="Daihatsu">Daihatsu</option>
-                    <option value="Honda">Honda</option>
-                    <option value="Infiniti">Infiniti</option>
-                    <option value="Isuzu">Isuzu</option>
-                    <option value="Lexus">Lexus</option>
-                    <option value="Mitsubishi">Mitsubishi</option>
-                    <option value="Nissan">Nissan</option>
-                    <option value="Subaru">Subaru</option>
-                    <option value="Suzuki">Suzuki</option>
-                </optgroup>
-                <optgroup label="UK cars">
-                    <option value="Aston Martin">Aston Martin</option>
-                    <option value="Austin">Austin</option>
-                    <option value="Bentley">Bentley</option>
-                    <option value="British Leyland">British Leyland</option>
-                    <option value="Ineos">Ineos</option>
-                    <option value="Jaguar">Jaguar</option>
-                    <option value="Land Rover">Land Rover</option>
-                    <option value="Lotus">Lotus</option>
-                    <option value="MINI">MINI</option>
-                    <option value="Morgan">Morgan</option>
-                    <option value="Rolls-Royce">Rolls-Royce</option>
-                    <option value="Rover">Rover</option>
-                    <option value="Triumph">Triumph</option>
-                </optgroup>
-                <optgroup label="French cars">
-                    <option value="Renault">Renault</option>
-                    <option value="Citroën">Citroën</option>
-                    <option value="DS Automobiles">DS Automobiles</option>
-                    <option value="Ligier">Ligier</option>
-                    <option value="Peugeot">Peugeot</option>
-                    <option value="Talbot">Talbot</option>
-                </optgroup>
-                <optgroup label="Spanish cars">
-                    <option value="Seat">Seat</option>
-                    <option value="Cupra">Cupra</option>
-                </optgroup>
-                <optgroup label="cars from the Czech Republic">
-                    <option value="Skoda">Skoda</option>
-                </optgroup>
-                <optgroup label="Chinese cars">
-                    <option value="Aiways">Aiways</option>
-                    <option value="BYD">BYD</option>
-                    <option value="JAC">JAC</option>
-                    <option value="ZhiDou">ZhiDou</option>
-                </optgroup>
-                <optgroup label="Swedish cars">
-                    <option value="Volvo">Volvo</option>
-                    <option value="Saab">Saab</option>
-                    <option value="Polestar">Polestar</option>
-                </optgroup>
-                <optgroup label="Russian cars">
-                    <option value="Lada">Lada</option>
-                </optgroup>
-                <optgroup label="Indian cars">
-                    <option value="Mahindra">Mahindra</option>
-                </optgroup>
-                <optgroup label="Austrian cars">
-                    <option value="KTM">KTM</option>
-                    <option value="Puch">Puch</option>
-                </optgroup>
-<!--                <optgroup label="Various">-->
-<!--                    <option value="Sonstige">Sonstige</option>-->
-<!--                </optgroup>-->
-            </select>
+            <div class="row">
+                <div class="row de">
+                    <label><input type="checkbox" name="names" value="Audi" onclick="handleCheckbox(this)"> Audi</label>
+                    <label><input type="checkbox" name="names" value="BMW" checked onclick="handleCheckbox(this)">
+                        BMW</label>
+                    <label><input type="checkbox" name="names" value="Mercedes-Benz" onclick="handleCheckbox(this)">
+                        Mercedes-Benz</label>
+                    <label><input type="checkbox" name="names" value="Opel" onclick="handleCheckbox(this)"> Opel</label>
+                    <label><input type="checkbox" name="names" value="VW" onclick="handleCheckbox(this)"> VW</label>
+                    <label><input type="checkbox" name="names" value="Alpina,Maybach" onclick="handleCheckbox(this)">Lesser
+                        known
+                        German car brands</label>
+                    <!--        <label><input type="checkbox" name="names" value="Alpina" onclick="handleCheckbox(this)"> Alpina</label>-->
+                    <!--        <label><input type="checkbox" name="names" value="Maybach" onclick="handleCheckbox(this)"> Maybach</label>-->
+                    <label><input type="checkbox" name="names" value="Porsche" onclick="handleCheckbox(this)">
+                        Porsche</label>
+                    <label><input type="checkbox" name="names" value="Smart" onclick="handleCheckbox(this)">
+                        Smart</label>
+                </div>
+                <div class="row it">
+                    <label><input type="checkbox" name="names" value="Fiat" onclick="handleCheckbox(this)"> Fiat</label>
+                    <label><input type="checkbox" name="names" value="Abarth" onclick="handleCheckbox(this)">
+                        Abarth</label>
+                    <label><input type="checkbox" name="names" value="Alfa Romeo" onclick="handleCheckbox(this)"> Alfa
+                        Romeo</label>
+                    <label><input type="checkbox" name="names" value="Casalini,Lancia,Tazzari"
+                                  onclick="handleCheckbox(this)">
+                        Lesser known Italian car brands</label>
+                    <!--        <label><input type="checkbox" name="names" value="Casalini" onclick="handleCheckbox(this)"> Casalini</label>-->
+                    <label><input type="checkbox" name="names" value="Ferrari" onclick="handleCheckbox(this)">
+                        Ferrari</label>
+                    <label><input type="checkbox" name="names" value="Lamborghini"
+                                  onclick="handleCheckbox(this)">Lamborghini</label>
+                    <!--        <label><input type="checkbox" name="names" value="Lancia" onclick="handleCheckbox(this)"> Lancia</label>-->
+                    <label><input type="checkbox" name="names" value="Maserati" onclick="handleCheckbox(this)"> Maserati</label>
+                    <!--        <label><input type="checkbox" name="names" value="Tazzari" onclick="handleCheckbox(this)"> Tazzari</label>-->
+                </div>
+                <div class="row us">
+                    <label><input type="checkbox" name="names" value="Ford" onclick="handleCheckbox(this)"> Ford</label>
+                    <label><input type="checkbox" name="names" value="Buick,GMC,Lincoln,Mercury,Pontiac,Corvette"
+                                  onclick="handleCheckbox(this)"> Lesser known US car brands</label>
+                    <!--        <label><input type="checkbox" name="names" value="Buick" onclick="handleCheckbox(this)"> Buick</label>-->
+                    <label><input type="checkbox" name="names" value="Cadillac" onclick="handleCheckbox(this)"> Cadillac</label>
+                    <label><input type="checkbox" name="names" value="Chevrolet" onclick="handleCheckbox(this)">
+                        Chevrolet</label>
+                    <label><input type="checkbox" name="names" value="Chrysler" onclick="handleCheckbox(this)"> Chrysler</label>
+                    <!--        <label><input type="checkbox" name="names" value="Corvette" onclick="handleCheckbox(this)"> Corvette</label>-->
+                    <label><input type="checkbox" name="names" value="Dodge" onclick="handleCheckbox(this)">
+                        Dodge</label>
+                    <!--        <label><input type="checkbox" name="names" value="GMC" onclick="handleCheckbox(this)"> GMC</label>-->
+                    <label><input type="checkbox" name="names" value="Hummer" onclick="handleCheckbox(this)">
+                        Hummer</label>
+                    <label><input type="checkbox" name="names" value="Jeep" onclick="handleCheckbox(this)"> Jeep</label>
+                    <!--        <label><input type="checkbox" name="names" value="Lincoln" onclick="handleCheckbox(this)"> Lincoln</label>-->
+                    <!--        <label><input type="checkbox" name="names" value="Mercury" onclick="handleCheckbox(this)"> Mercury</label>-->
+                    <!--        <label><input type="checkbox" name="names" value="Pontiac" onclick="handleCheckbox(this)"> Pontiac</label>-->
+                    <label><input type="checkbox" name="names" value="Tesla" onclick="handleCheckbox(this)">
+                        Tesla</label>
+                </div>
+                <div class="row kr">
+                    <label><input type="checkbox" name="names" value="Hyundai" onclick="handleCheckbox(this)">
+                        Hyundai</label>
+                    <label><input type="checkbox" name="names" value="KIA" onclick="handleCheckbox(this)"> KIA</label>
+                    <label><input type="checkbox" name="names" value="SsangYong" onclick="handleCheckbox(this)">
+                        SsangYong</label>
+                </div>
+                <div class="row fr">
+                    <label><input type="checkbox" name="names" value="Renault" onclick="handleCheckbox(this)">
+                        Renault</label>
+                    <label><input type="checkbox" name="names" value="Citroën" onclick="handleCheckbox(this)">
+                        Citroën</label>
+                    <!--        <label><input type="checkbox" name="names" value="DS Automobiles" onclick="handleCheckbox(this)"> DS-->
+                    <!--            Automobiles</label>-->
+                    <label><input type="checkbox" name="names" value="Ligier,Talbot" onclick="handleCheckbox(this)">
+                        Lesser known
+                        French car brands</label>
+                    <!--        <label><input type="checkbox" name="names" value="Ligier" onclick="handleCheckbox(this)"> Ligier</label>-->
+                    <label><input type="checkbox" name="names" value="Peugeot" onclick="handleCheckbox(this)">
+                        Peugeot</label>
+                    <!--        <label><input type="checkbox" name="names" value="Talbot" onclick="handleCheckbox(this)"> Talbot</label>-->
+                </div>
+                <div class="row jp">
+                    <label><input type="checkbox" name="names" value="Mazda" onclick="handleCheckbox(this)">
+                        Mazda</label>
+                    <label><input type="checkbox" name="names" value="Toyota" onclick="handleCheckbox(this)">
+                        Toyota</label>
+                    <label><input type="checkbox" name="names" value="Daihatsu,Infiniti,Isuzu,Subaru"
+                                  onclick="handleCheckbox(this)"> Lesser known Japanees car brands</label>
+                    <!--        <label><input type="checkbox" name="names" value="Daihatsu" onclick="handleCheckbox(this)"> Daihatsu</label>-->
+                    <label><input type="checkbox" name="names" value="Honda" onclick="handleCheckbox(this)">
+                        Honda</label>
+                    <!--        <label><input type="checkbox" name="names" value="Infiniti" onclick="handleCheckbox(this)"> Infiniti</label>-->
+                    <!--        <label><input type="checkbox" name="names" value="Isuzu" onclick="handleCheckbox(this)"> Isuzu</label>-->
+                    <label><input type="checkbox" name="names" value="Lexus" onclick="handleCheckbox(this)">
+                        Lexus</label>
+                    <label><input type="checkbox" name="names" value="Mitsubishi" onclick="handleCheckbox(this)">
+                        Mitsubishi</label>
+                    <label><input type="checkbox" name="names" value="Nissan" onclick="handleCheckbox(this)">
+                        Nissan</label>
+                    <!--        <label><input type="checkbox" name="names" value="Subaru" onclick="handleCheckbox(this)"> Subaru</label>-->
+                    <label><input type="checkbox" name="names" value="Suzuki" onclick="handleCheckbox(this)">
+                        Suzuki</label>
+                </div>
+                <div class="row uk">
+                    <label><input type="checkbox" name="names" value="Aston Martin" onclick="handleCheckbox(this)">
+                        Aston
+                        Martin</label>
+                    <label><input type="checkbox" name="names" value="Austin" onclick="handleCheckbox(this)">
+                        Austin</label>
+                    <label><input type="checkbox" name="names" value="Bentley" onclick="handleCheckbox(this)">
+                        Bentley</label>
+                    <!--        <label><input type="checkbox" name="names" value="British Leyland" onclick="handleCheckbox(this)"> British-->
+                    <!--            Leyland</label>-->
+                    <label><input type="checkbox" name="names" value="Ineos,Lotus,Morgan,Rover,Triumph"
+                                  onclick="handleCheckbox(this)"> Lesser known British car brands</label>
+                    <!--        <label><input type="checkbox" name="names" value="Ineos" onclick="handleCheckbox(this)"> Ineos</label>-->
+                    <label><input type="checkbox" name="names" value="Jaguar" onclick="handleCheckbox(this)">
+                        Jaguar</label>
+                    <label><input type="checkbox" name="names" value="Land Rover" onclick="handleCheckbox(this)"> Land
+                        Rover</label>
+                    <!--        <label><input type="checkbox" name="names" value="Lotus" onclick="handleCheckbox(this)"> Lotus</label>-->
+                    <label><input type="checkbox" name="names" value="MINI" onclick="handleCheckbox(this)"> MINI</label>
+                    <!--        <label><input type="checkbox" name="names" value="Morgan" onclick="handleCheckbox(this)"> Morgan</label>-->
+                    <label><input type="checkbox" name="names" value="Rolls-Royce" onclick="handleCheckbox(this)">
+                        Rolls-Royce</label>
+                    <!--        <label><input type="checkbox" name="names" value="Rover" onclick="handleCheckbox(this)"> Rover</label>-->
+                    <!--        <label><input type="checkbox" name="names" value="Triumph" onclick="handleCheckbox(this)"> Triumph</label>-->
+                </div>
+                <div class="row">
+                    <label><input type="checkbox" name="names" value="Seat" onclick="handleCheckbox(this)"> Seat</label>
+                    <label><input type="checkbox" name="names" value="Cupra" onclick="handleCheckbox(this)">
+                        Cupra</label>
+                </div>
+                <div class="row cz">
+                    <label><input type="checkbox" name="names" value="Skoda" onclick="handleCheckbox(this)">
+                        Skoda</label>
+                </div>
+                <div class="row cn">
+                    <label><input type="checkbox" name="names" value="Aiways,BYD,JAC,ZhiDou"
+                                  onclick="handleCheckbox(this)"> Chinees
+                        car brands</label>
+                    <!--        <label><input type="checkbox" name="names" value="Aiways" onclick="handleCheckbox(this)"> Aiways</label>-->
+                    <!--        <label><input type="checkbox" name="names" value="BYD" onclick="handleCheckbox(this)"> BYD</label>-->
+                    <!--        <label><input type="checkbox" name="names" value="JAC" onclick="handleCheckbox(this)"> JAC</label>-->
+                    <!--        <label><input type="checkbox" name="names" value="ZhiDou" onclick="handleCheckbox(this)"> ZhiDou</label>-->
+                </div>
+                <div class="row se">
+                    <label><input type="checkbox" name="names" value="Volvo" onclick="handleCheckbox(this)">
+                        Volvo</label>
+                    <label><input type="checkbox" name="names" value="Saab" onclick="handleCheckbox(this)"> Saab</label>
+                    <label><input type="checkbox" name="names" value="Polestar" onclick="handleCheckbox(this)"> Polestar</label>
+                </div>
+                <div class="row various">
+                    <label><input type="checkbox" name="names" value="various" value="Lada,Mahindra,KTM,Puch"
+                                  onclick="handleCheckbox(this)"> Various smaller car types</label>
+                </div>
+            </div>
+            <button type="button" onclick="uncheckAllCheckboxes()">Uncheck All Checkboxes</button>
         </label>
     </div>
 </div>
 
 <div id="map-chart-area"></div>
 <div id="chart-area"></div>
-<div id="pie-chart-area"></div>
+<div id="pie-chart-area" class="row"></div>
 
 </body>
 
@@ -213,5 +256,16 @@
 <script src="js/data_filtering.js"></script>
 <script src="js/map_main.js"></script>
 <script src="js/pie_main.js"></script>
+
+<script>
+    function uncheckAllCheckboxes() {
+        let checkboxes = document.getElementsByName("names")
+
+        for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = false
+        }
+    }
+
+</script>
 </html>
 
