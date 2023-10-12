@@ -149,36 +149,37 @@
     <!--        <label><input type="checkbox" name="names" value="KTM" onclick="handleCheckbox(this)"> KTM</label>-->
     <!--        <label><input type="checkbox" name="names" value="Puch" onclick="handleCheckbox(this)"> Puch</label>-->
     <!--    </div>-->
+    <br>
+    <button type="button" onclick="uncheckAllCheckboxes()">Uncheck All Checkboxes</button>
 
 </div>
-<button type="button" onclick="uncheckAllCheckboxes()">Uncheck All Checkboxes</button>
 
 <script>
-    function handleCheckbox() {
-        var selectedNames = []
-        var checkboxes = document.getElementsByName("names")
+    function handleCheckbox(checked) {
+        let clickedCheckbox = checked.value;
+        let selectedNames = [];
+        let checkboxes = document.getElementsByName("names");
 
-        for (var i = 0; i < checkboxes.length; i++) {
+        for (let i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked) {
-                selectedNames.push(checkboxes[i].value)
+                selectedNames.push(checkboxes[i].value);
             }
         }
 
-        console.log("Selected Names: " + selectedNames.join(","))
-    }
-
-    function getSelectedNames() {
-        var selectedNames = []
-        var checkboxes = document.getElementsByName("names")
-
-        for (var i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i].checked) {
-                selectedNames.push(checkboxes[i].value)
+        if (selectedNames.length > 3) {
+            for (const checkbox of checkboxes) {
+                if (checkbox.checked && checkbox.value !== clickedCheckbox) {
+                    checkbox.checked = false
+                    selectedNames = selectedNames.filter(name => name !== checkbox.value)
+                    break;
+                }
             }
         }
 
-        alert("Selected Names: " + selectedNames.join(", "))
+        console.log(selectedNames.join(","))
+        return selectedNames.join(",")
     }
+
 
     function uncheckAllCheckboxes() {
         var checkboxes = document.getElementsByName("names")

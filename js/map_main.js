@@ -51,7 +51,6 @@ function drawMap(activeList) {
         .attr('class', d => d.properties.ISO_A2)
         // .style("fill", d => activeList.includes(d.properties.ISO_A2) ? 'rgb(244, 244, 244)' : 'url(#emptyCountryPattern')
         .style("fill", d => {
-            // activeList.includes(d.properties.ISO_A2) ? console.log(d.properties.ISO_A2) : console.log(`not found:              ${d.properties.ISO_A2}`)
             return activeList.includes(d.properties.ISO_A2) ? 'rgb(244, 244, 244)' : 'url(#emptyCountryPattern'
         })
         .style('stroke', 'black')
@@ -138,11 +137,11 @@ function addHexGraph(data) {
         const dataGroup = data.get(key)
         const bin = hexbin(dataGroup.map(d => (
             {
-                xy: projection([d.longitude_coordinates, d.latitude_coordinates]),
-                price: d.price,
-                mileage: d.mileage,
-                date: d.date_of_manufacturing,
-                fuelType: d.fuel_type
+                xy: projection([d[4], d[3]]),
+                price: d[7],
+                mileage: d[6],
+                date: d[0],
+                fuelType: d[2]
             }))).map((d) => {
                 d.date = new Number(d3.median(d, (d) => d.date))
                 d.mileage = new Number(d3.median(d, (d) => d.mileage))

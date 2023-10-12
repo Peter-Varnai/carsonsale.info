@@ -1,631 +1,619 @@
-.Audi path {
-    fill: rgb(37, 117, 219)
+.audi path {
+	fill: rgb(192, 201, 131)
 }
 
-.BMW path {
-    fill: rgb(142, 168, 122)
+.bmw path {
+	fill: rgb(36, 24, 62)
 }
 
-.Fiat path {
-    fill: rgb(194, 2, 180)
+.fiat path {
+	fill: rgb(41, 41, 172)
 }
 
-.Ford path {
-    fill: rgb(123, 237, 204)
+.ford path {
+	fill: rgb(228, 156, 120)
 }
 
-.Hyundai path {
-    fill: rgb(236, 96, 159)
+.hyundai path {
+	fill: rgb(159, 204, 115)
 }
 
-.KIA path {
-    fill: rgb(27, 250, 128)
+.kia path {
+	fill: rgb(139, 115, 231)
 }
 
-.Mazda path {
-    fill: rgb(111, 102, 8)
+.mazda path {
+	fill: rgb(201, 217, 162)
 }
 
-.Mercedes-Benz path {
-    fill: rgb(125, 70, 173)
+.mercedes_benz path {
+	fill: rgb(64, 187, 10)
 }
 
-.Opel path {
-    fill: rgb(92, 62, 100)
+.opel path {
+	fill: rgb(37, 65, 236)
 }
 
-.Renault path {
-    fill: rgb(57, 107, 230)
+.renault path {
+	fill: rgb(124, 109, 57)
 }
 
-.Seat path {
-    fill: rgb(240, 216, 237)
+.seat path {
+	fill: rgb(149, 175, 50)
 }
 
-.Skoda path {
-    fill: rgb(162, 82, 139)
+.skoda path {
+	fill: rgb(197, 111, 110)
 }
 
-.Toyota path {
-    fill: rgb(153, 170, 253)
+.toyota path {
+	fill: rgb(175, 15, 209)
 }
 
-.Volvo path {
-    fill: rgb(23, 168, 202)
+.volvo path {
+	fill: rgb(180, 226, 176)
 }
 
-.VW path {
-    fill: rgb(6, 195, 144)
+.vw path {
+	fill: rgb(60, 156, 51)
 }
 
-.Abarth path {
-    fill: rgb(175, 78, 27)
+.abarth path {
+	fill: rgb(80, 180, 62)
 }
 
-.Aiways path {
-    fill: rgb(222, 164, 230)
+.aiways path {
+	fill: rgb(0, 246, 134)
 }
 
-.Aixam path {
-    fill: rgb(132, 164, 111)
+.aixam path {
+	fill: rgb(40, 70, 129)
 }
 
-.Alfa Romeo path {
-    fill: rgb(212, 209, 22)
+.alfa_romeo path {
+	fill: rgb(255, 223, 45)
 }
 
-.Alpina path {
-    fill: rgb(192, 150, 6)
+.alpina path {
+	fill: rgb(128, 168, 10)
 }
 
-.Alpine path {
-    fill: rgb(44, 172, 7)
+.alpine path {
+	fill: rgb(254, 46, 122)
 }
 
-.Aston Martin path {
-    fill: rgb(100, 195, 25)
+.aston_martin path {
+	fill: rgb(135, 46, 45)
 }
 
-.Austin path {
-    fill: rgb(144, 239, 51)
+.austin path {
+	fill: rgb(0, 163, 146)
 }
 
-.Bentley path {
-    fill: rgb(169, 191, 248)
+.bentley path {
+	fill: rgb(29, 212, 110)
 }
 
-.British Leyland path {
-    fill: rgb(157, 56, 245)
+.british_leyland path {
+	fill: rgb(205, 217, 253)
 }
 
-.Buick path {
-    fill: rgb(76, 234, 70)
+.buick path {
+	fill: rgb(73, 156, 173)
 }
 
-.BYD path {
-    fill: rgb(121, 122, 11)
+.byd path {
+	fill: rgb(182, 246, 210)
 }
 
-.Cadillac path {
-    fill: rgb(233, 128, 158)
+.cadillac path {
+	fill: rgb(122, 98, 178)
 }
 
-.Casalini path {
-    fill: rgb(213, 48, 112)
+.casalini path {
+	fill: rgb(75, 203, 234)
 }
 
-.Caterham path {
-    fill: rgb(32, 99, 106)
+.caterham path {
+	fill: rgb(35, 130, 71)
 }
 
-.Chevrolet path {
-    fill: rgb(233, 224, 198)
+.chevrolet path {
+	fill: rgb(47, 32, 215)
 }
 
-.Chevrolet
-
-/
-Daewoo path {
-    fill: rgb(98, 14, 118)
-}
-
-.Chrysler path {
-    fill: rgb(253, 217, 170)
-}
-
-.Citroën path {
-    fill: rgb(206, 91, 136)
+.chevrolet___daewoo path {
+	fill: rgb(196, 248, 48)
 }
 
-.Corvette path {
-    fill: rgb(150, 44, 88)
+.chrysler path {
+	fill: rgb(158, 84, 30)
 }
 
-.Cupra path {
-    fill: rgb(211, 211, 7)
+.citroen path {
+	fill: rgb(178, 105, 171)
 }
 
-.Dacia path {
-    fill: rgb(214, 221, 192)
+.corvette path {
+	fill: rgb(137, 243, 72)
 }
 
-.Daihatsu path {
-    fill: rgb(17, 173, 151)
+.cupra path {
+	fill: rgb(8, 30, 3)
 }
 
-.Dodge path {
-    fill: rgb(166, 194, 175)
+.dacia path {
+	fill: rgb(255, 37, 243)
 }
 
-.DS Automobiles path {
-    fill: rgb(116, 119, 201)
+.daihatsu path {
+	fill: rgb(239, 97, 180)
 }
 
-.Eli path {
-    fill: rgb(89, 96, 251)
+.dodge path {
+	fill: rgb(124, 105, 222)
 }
 
-.Ferrari path {
-    fill: rgb(97, 62, 26)
+.ds_automobiles path {
+	fill: rgb(236, 59, 43)
 }
 
-.GMC path {
-    fill: rgb(110, 148, 245)
+.eli path {
+	fill: rgb(141, 224, 163)
 }
 
-.Graf Carello path {
-    fill: rgb(174, 185, 63)
+.ferrari path {
+	fill: rgb(149, 200, 245)
 }
 
-.Honda path {
-    fill: rgb(209, 185, 146)
+.gmc path {
+	fill: rgb(34, 6, 52)
 }
 
-.Hummer path {
-    fill: rgb(172, 212, 20)
+.graf_carello path {
+	fill: rgb(82, 126, 62)
 }
 
-.Ineos path {
-    fill: rgb(28, 104, 39)
+.honda path {
+	fill: rgb(134, 62, 146)
 }
 
-.Infiniti path {
-    fill: rgb(59, 16, 156)
+.hummer path {
+	fill: rgb(177, 125, 197)
 }
 
-.Isuzu path {
-    fill: rgb(72, 240, 75)
+.ineos path {
+	fill: rgb(153, 255, 111)
 }
 
-.IVECO path {
-    fill: rgb(169, 193, 41)
+.infiniti path {
+	fill: rgb(204, 243, 204)
 }
 
-.JAC path {
-    fill: rgb(15, 87, 78)
+.isuzu path {
+	fill: rgb(78, 170, 184)
 }
 
-.Jaguar path {
-    fill: rgb(238, 31, 21)
+.iveco path {
+	fill: rgb(130, 154, 95)
 }
 
-.Jeep path {
-    fill: rgb(255, 23, 5)
+.jac path {
+	fill: rgb(175, 22, 234)
 }
 
-.KTM path {
-    fill: rgb(63, 54, 113)
+.jaguar path {
+	fill: rgb(205, 141, 237)
 }
 
-.Lada path {
-    fill: rgb(64, 137, 27)
+.jeep path {
+	fill: rgb(182, 236, 180)
 }
 
-.Lamborghini path {
-    fill: rgb(193, 233, 252)
+.ktm path {
+	fill: rgb(115, 199, 171)
 }
 
-.Lancia path {
-    fill: rgb(248, 183, 198)
+.lada path {
+	fill: rgb(59, 27, 47)
 }
 
-.Land Rover path {
-    fill: rgb(111, 80, 140)
+.lamborghini path {
+	fill: rgb(247, 22, 201)
 }
 
-.Lexus path {
-    fill: rgb(138, 110, 128)
+.lancia path {
+	fill: rgb(60, 224, 91)
 }
 
-.Ligier path {
-    fill: rgb(23, 89, 14)
+.land_rover path {
+	fill: rgb(140, 55, 109)
 }
 
-.Lincoln path {
-    fill: rgb(11, 36, 195)
+.lexus path {
+	fill: rgb(3, 152, 118)
 }
 
-.Lotus path {
-    fill: rgb(127, 182, 31)
+.ligier path {
+	fill: rgb(196, 185, 48)
 }
 
-.Mahindra path {
-    fill: rgb(140, 3, 14)
+.lincoln path {
+	fill: rgb(219, 34, 53)
 }
 
-.MAN path {
-    fill: rgb(123, 148, 106)
+.lotus path {
+	fill: rgb(184, 207, 162)
 }
 
-.Maserati path {
-    fill: rgb(193, 195, 133)
+.mahindra path {
+	fill: rgb(195, 230, 164)
 }
 
-.Maybach path {
-    fill: rgb(157, 31, 215)
+.man path {
+	fill: rgb(143, 219, 212)
 }
 
-.McLaren path {
-    fill: rgb(145, 190, 60)
+.maserati path {
+	fill: rgb(214, 75, 111)
 }
 
-.Mercury path {
-    fill: rgb(25, 46, 144)
+.maybach path {
+	fill: rgb(108, 207, 219)
 }
 
-.MG path {
-    fill: rgb(216, 2, 195)
+.mclaren path {
+	fill: rgb(246, 136, 149)
 }
 
-.Microcar path {
-    fill: rgb(200, 224, 38)
+.mercury path {
+	fill: rgb(109, 29, 0)
 }
 
-.MINI path {
-    fill: rgb(135, 69, 184)
+.mg path {
+	fill: rgb(151, 68, 114)
 }
 
-.Mitsubishi path {
-    fill: rgb(134, 19, 131)
+.microcar path {
+	fill: rgb(109, 2, 218)
 }
 
-.Morgan path {
-    fill: rgb(204, 21, 163)
+.mini path {
+	fill: rgb(16, 146, 226)
 }
 
-.Nissan path {
-    fill: rgb(199, 99, 90)
+.mitsubishi path {
+	fill: rgb(139, 238, 179)
 }
 
-.Peugeot path {
-    fill: rgb(16, 206, 165)
+.morgan path {
+	fill: rgb(200, 235, 131)
 }
 
-.Polestar path {
-    fill: rgb(147, 136, 0)
+.nissan path {
+	fill: rgb(224, 240, 227)
 }
 
-.Pontiac path {
-    fill: rgb(222, 176, 69)
+.peugeot path {
+	fill: rgb(69, 21, 80)
 }
 
-.Porsche path {
-    fill: rgb(168, 60, 94)
+.polestar path {
+	fill: rgb(180, 19, 146)
 }
 
-.Puch path {
-    fill: rgb(213, 53, 234)
+.pontiac path {
+	fill: rgb(230, 60, 164)
 }
 
-.Rolls-Royce path {
-    fill: rgb(254, 80, 238)
+.porsche path {
+	fill: rgb(4, 72, 229)
 }
 
-.Rover path {
-    fill: rgb(133, 89, 125)
+.puch path {
+	fill: rgb(202, 231, 205)
 }
 
-.Saab path {
-    fill: rgb(33, 147, 102)
+.rolls_royce path {
+	fill: rgb(252, 192, 72)
 }
 
-.Smart path {
-    fill: rgb(8, 156, 87)
+.rover path {
+	fill: rgb(225, 175, 184)
 }
 
-.SsangYong path {
-    fill: rgb(234, 43, 162)
+.saab path {
+	fill: rgb(177, 237, 164)
 }
 
-.Subaru path {
-    fill: rgb(53, 116, 169)
+.smart path {
+	fill: rgb(251, 128, 141)
 }
 
-.Suzuki path {
-    fill: rgb(16, 136, 206)
+.ssangyong path {
+	fill: rgb(148, 49, 66)
 }
 
-.Talbot path {
-    fill: rgb(88, 7, 167)
+.subaru path {
+	fill: rgb(221, 123, 127)
 }
 
-.Tazzari path {
-    fill: rgb(172, 191, 36)
+.suzuki path {
+	fill: rgb(171, 143, 208)
 }
 
-.Tesla path {
-    fill: rgb(121, 143, 140)
+.talbot path {
+	fill: rgb(26, 24, 53)
 }
 
-.Trabant path {
-    fill: rgb(221, 214, 79)
+.tazzari path {
+	fill: rgb(75, 215, 195)
 }
 
-.Triumph path {
-    fill: rgb(81, 75, 170)
+.tesla path {
+	fill: rgb(235, 19, 170)
 }
 
-.ZhiDou path {
-    fill: rgb(32, 111, 189)
+.trabant path {
+	fill: rgb(84, 39, 211)
 }
 
-.Sonstige path {
-    fill: rgb(49, 152, 26)
+.triumph path {
+	fill: rgb(69, 252, 195)
 }
 
-.Sportequipe path {
-    fill: rgb(252, 233, 68)
+.zhidou path {
+	fill: rgb(193, 119, 107)
 }
 
-.Austin-Healey path {
-    fill: rgb(50, 136, 250)
+.sonstige path {
+	fill: rgb(11, 157, 160)
 }
 
-.Tata path {
-    fill: rgb(242, 202, 79)
+.sportequipe path {
+	fill: rgb(152, 19, 157)
 }
 
-.Bugatti path {
-    fill: rgb(100, 134, 238)
+.austin_healey path {
+	fill: rgb(214, 29, 223)
 }
 
-.Caravans-Wohnm path {
-    fill: rgb(213, 18, 155)
+.tata path {
+	fill: rgb(148, 234, 55)
 }
 
-.Carver path {
-    fill: rgb(120, 5, 16)
+.bristol path {
+	fill: rgb(220, 141, 48)
 }
 
-.Cenntro path {
-    fill: rgb(10, 222, 125)
+.bugatti path {
+	fill: rgb(160, 242, 5)
 }
 
-.Changhe path {
-    fill: rgb(12, 43, 143)
+.caravans_wohnm path {
+	fill: rgb(196, 158, 28)
 }
 
-.Chatenet path {
-    fill: rgb(77, 155, 127)
+.carver path {
+	fill: rgb(2, 96, 121)
 }
 
-. path {
-    fill: rgb(83, 54, 36)
+.cenntro path {
+	fill: rgb(52, 40, 228)
 }
 
-.Elaris path {
-    fill: rgb(77, 28, 154)
+.changhe path {
+	fill: rgb(24, 130, 226)
 }
 
-.ZAZ path {
-    fill: rgb(139, 208, 20)
+.chatenet path {
+	fill: rgb(88, 209, 51)
 }
 
-.Innocenti path {
-    fill: rgb(173, 87, 197)
+.elaris path {
+	fill: rgb(118, 213, 10)
 }
 
-.Reliant path {
-    fill: rgb(134, 48, 187)
+.zaz path {
+	fill: rgb(194, 40, 114)
 }
 
-.Mitsuoka path {
-    fill: rgb(129, 76, 155)
+.innocenti path {
+	fill: rgb(116, 44, 245)
 }
 
-.GAZ path {
-    fill: rgb(113, 169, 17)
+.ferrar path {
+	fill: rgb(191, 226, 58)
 }
 
-.Wiesmann path {
-    fill: rgb(223, 110, 111)
+.reliant path {
+	fill: rgb(70, 203, 155)
 }
 
-.Karma path {
-    fill: rgb(247, 60, 59)
+.mitsuoka path {
+	fill: rgb(104, 86, 119)
 }
 
-.Citroen path {
-    fill: rgb(232, 149, 121)
+.gaz path {
+	fill: rgb(133, 146, 160)
 }
 
-.NSU path {
-    fill: rgb(136, 154, 33)
+.wiesmann path {
+	fill: rgb(114, 94, 59)
 }
 
-.DR path {
-    fill: rgb(14, 87, 158)
+.karma path {
+	fill: rgb(177, 69, 217)
 }
 
-.Militem path {
-    fill: rgb(61, 2, 42)
+.nsu path {
+	fill: rgb(53, 20, 254)
 }
 
-.DAF path {
-    fill: rgb(115, 80, 24)
+.dr path {
+	fill: rgb(202, 157, 210)
 }
 
-.VAZ path {
-    fill: rgb(211, 149, 163)
+.militem path {
+	fill: rgb(29, 123, 81)
 }
 
-.Lynk path {
-    fill: rgb(160, 51, 99)
+.iso path {
+	fill: rgb(137, 220, 233)
 }
 
-.e.GO path {
-    fill: rgb(201, 229, 100)
+.daf path {
+	fill: rgb(171, 100, 207)
 }
 
-.9
-ff path {
-    fill: rgb(234, 99, 36)
+.vaz path {
+	fill: rgb(114, 204, 110)
 }
 
-.DS path {
-    fill: rgb(114, 76, 232)
+.lynk path {
+	fill: rgb(18, 66, 211)
 }
 
-.Bristol path {
-    fill: rgb(254, 16, 85)
+.ds path {
+	fill: rgb(234, 205, 98)
 }
 
-.Silence path {
-    fill: rgb(204, 84, 41)
+.e.go path {
+	fill: rgb(85, 225, 3)
 }
 
-.Great path {
-    fill: rgb(218, 187, 172)
+.ruf path {
+	fill: rgb(191, 47, 164)
 }
 
-.Delorean path {
-    fill: rgb(86, 179, 76)
+.silence path {
+	fill: rgb(143, 144, 59)
 }
 
-.Alfa_Romeo path {
-    fill: rgb(234, 144, 247)
+.great path {
+	fill: rgb(239, 246, 152)
 }
 
-.Zhidou path {
-    fill: rgb(234, 6, 113)
+.delorean path {
+	fill: rgb(157, 49, 84)
 }
 
-.VEM path {
-    fill: rgb(149, 211, 252)
+.vem path {
+	fill: rgb(54, 118, 229)
 }
 
-.AC path {
-    fill: rgb(97, 50, 178)
+.ac path {
+	fill: rgb(216, 130, 74)
 }
 
-.Vanderhall path {
-    fill: rgb(175, 214, 42)
+.vanderhall path {
+	fill: rgb(99, 254, 20)
 }
 
-.Kia path {
-    fill: rgb(79, 244, 81)
+.santana path {
+	fill: rgb(67, 53, 189)
 }
 
-.Santana path {
-    fill: rgb(249, 137, 249)
+.amphicar path {
+	fill: rgb(37, 195, 65)
 }
 
-.Amphicar path {
-    fill: rgb(131, 51, 146)
+.panther path {
+	fill: rgb(163, 209, 4)
 }
 
-.Panther path {
-    fill: rgb(23, 212, 205)
+.moskvich path {
+	fill: rgb(100, 2, 18)
 }
 
-.Moskvich path {
-    fill: rgb(76, 191, 26)
+.wenckstern path {
+	fill: rgb(136, 157, 82)
 }
 
-.Wenckstern path {
-    fill: rgb(188, 149, 125)
+.alba path {
+	fill: rgb(83, 129, 181)
 }
 
-.Alba path {
-    fill: rgb(158, 207, 106)
+.studebaker path {
+	fill: rgb(172, 143, 187)
 }
 
-.Studebaker path {
-    fill: rgb(222, 189, 71)
+.de path {
+	fill: rgb(104, 167, 8)
 }
 
-.De path {
-    fill: rgb(181, 248, 110)
+.acura path {
+	fill: rgb(9, 35, 119)
 }
 
-.Acura path {
-    fill: rgb(155, 195, 163)
+.shelby path {
+	fill: rgb(8, 78, 237)
 }
 
-.Shelby path {
-    fill: rgb(135, 204, 205)
+.maxus path {
+	fill: rgb(132, 83, 171)
 }
 
-.Maxus path {
-    fill: rgb(253, 6, 188)
+.minauto path {
+	fill: rgb(37, 225, 36)
 }
 
-.Minauto path {
-    fill: rgb(16, 116, 4)
+.mpm path {
+	fill: rgb(72, 135, 10)
 }
 
-.MPM path {
-    fill: rgb(86, 134, 225)
+.wartburg path {
+	fill: rgb(15, 209, 12)
 }
 
-.Wartburg path {
-    fill: rgb(182, 23, 229)
+.haval path {
+	fill: rgb(202, 78, 219)
 }
 
-.Haval path {
-    fill: rgb(166, 66, 181)
+.tasso path {
+	fill: rgb(109, 20, 127)
 }
 
-.Tasso path {
-    fill: rgb(70, 99, 209)
+.hurtan path {
+	fill: rgb(49, 83, 105)
 }
 
-.Hurtan path {
-    fill: rgb(65, 33, 186)
+.jensen path {
+	fill: rgb(110, 70, 73)
 }
 
-.Jensen path {
-    fill: rgb(9, 197, 206)
+.donkervoort path {
+	fill: rgb(212, 51, 118)
 }
 
-.Donkervoort path {
-    fill: rgb(185, 23, 196)
+.giotti path {
+	fill: rgb(109, 153, 223)
 }
 
-.Giotti path {
-    fill: rgb(2, 105, 5)
+.baic path {
+	fill: rgb(116, 146, 200)
 }
 
-.Baic path {
-    fill: rgb(121, 115, 235)
+.grecav path {
+	fill: rgb(124, 24, 169)
 }
 
-.Grecav path {
-    fill: rgb(129, 173, 174)
+.others path {
+	fill: rgb(156, 60, 195)
 }
 
-.Others path {
-    fill: rgb(234, 60, 144)
+.galloper path {
+	fill: rgb(51, 50, 229)
 }
 
-.Dallara path {
-    fill: rgb(233, 84, 198)
+.dallara path {
+	fill: rgb(229, 134, 80)
 }
 
-.EMC path {
-    fill: rgb(223, 213, 79)
+.emc path {
+	fill: rgb(96, 22, 68)
 }
 
-.Bellier path {
-    fill: rgb(167, 23, 101)
+.bellier path {
+	fill: rgb(143, 21, 21)
 }

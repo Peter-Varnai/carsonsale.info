@@ -82,7 +82,7 @@ function addPie(dataIn) {
     const fuelTypes = []
     for (const key of dataIn.keys()) {
         const data = dataIn.get(key)
-        const carManufacturer = data[0]['manufacturer']
+        const carManufacturer = data[0][5]
         const pieDiv = d3.select("#pie-chart-area")
             .append('div')
             .attr('class', 'pieDiv')
@@ -95,15 +95,16 @@ function addPie(dataIn) {
             .attr("style", "max-width: 100%; height: auto;")
 
 
-        const fuelTypeGroupData = d3.group(data, d => d.fuel_type)
-        const aggregatedData = Array.from(fuelTypeDataCorrector(fuelTypeGroupData).entries())
+        const fuelTypeGroupData = d3.group(data, d => d[2])
+        console.log(fuelTypeGroupData)
+        const aggregatedData = Array.from(fuelTypeGroupData.entries())
             .map(([fuelType, aggData]) => {
                 fuelTypes.includes(fuelType) ? undefined : fuelTypes.push(fuelType)
                 return {
                     fuel_type: fuelType,
                     noOnSale: aggData.length,
-                    total_mileage: d3.sum(aggData, d => d.mileage),
-                    average_price: d3.mean(aggData, d => d.price),
+                    total_mileage: d3.sum(aggData, d => d[6]),
+                    average_price: d3.mean(aggData, d => d[7]),
                 }
             })
 
@@ -115,7 +116,7 @@ function addPie(dataIn) {
             .enter()
             .append("path")
             .attr("d", arc)
-            .attr("class", d => fuelTypeCheck(d.data.fuel_type) + " piePath")
+            .attr("class", d => d.data.fuel_type + " piePath")
             .attr("transform", "scale(0)")
             .transition().duration(300).delay((d, i) => i * 120)
             .attr("transform", "scale(1)")
@@ -144,6 +145,7 @@ function addPie(dataIn) {
     }
 
 
+
     // ADDING LEGEND
     const pieLegendSvg = d3.select("#pie-chart-area").append("svg")
         .attr("width", 90)
@@ -157,13 +159,13 @@ function addPie(dataIn) {
     let legend = legends
         .enter()
         .append("g")
-        .attr("class", d => fuelTypeCheck(d) + " pieLegend")
+        .attr("class", d => d + " pieLegend")
         .attr("transform", function (d, i) {
             return `translate(12, ${(i + 1) * 30})`
         })
 
     legend.append("text")
-        .text(d => fuelTypeCheck(d))
+        .text(d => d)
         .attr("fill", "black")
         .attr("transform", "translate(18,5)")
 
