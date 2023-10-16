@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/car-brand-colors.css">
     <link rel="stylesheet" href="css/pie-chart.css">
+    <link rel="stylesheet" href="css/loading-anim.css">
 </head>
 
 <body>
@@ -111,7 +112,8 @@
             <div class="row kr">
                 <label><input type="checkbox" name="manufacturerName" value="Hyundai" onclick="handleCheckbox(this)">
                     Hyundai</label>
-                <label><input type="checkbox" name="manufacturerName" value="KIA" onclick="handleCheckbox(this)"> KIA</label>
+                <label><input type="checkbox" name="manufacturerName" value="KIA" onclick="handleCheckbox(this)">
+                    KIA</label>
                 <label><input type="checkbox" name="manufacturerName" value="SsangYong" onclick="handleCheckbox(this)">
                     SsangYong</label>
             </div>
@@ -120,7 +122,8 @@
                     Renault</label>
                 <label><input type="checkbox" name="manufacturerName" value="Citroen" onclick="handleCheckbox(this)">
                     Citroën</label>
-                <label><input type="checkbox" name="manufacturerName" value="Ligier,Talbot" onclick="handleCheckbox(this)">
+                <label><input type="checkbox" name="manufacturerName" value="Ligier,Talbot"
+                              onclick="handleCheckbox(this)">
                     Lesser known
                     French car brands</label>
                 <label><input type="checkbox" name="manufacturerName" value="Peugeot" onclick="handleCheckbox(this)">
@@ -145,7 +148,8 @@
                     Suzuki</label>
             </div>
             <div class="row uk">
-                <label><input type="checkbox" name="manufacturerName" value="Aston_Martin" onclick="handleCheckbox(this)">
+                <label><input type="checkbox" name="manufacturerName" value="Aston_Martin"
+                              onclick="handleCheckbox(this)">
                     Aston
                     Martin</label>
                 <label><input type="checkbox" name="manufacturerName" value="Austin" onclick="handleCheckbox(this)">
@@ -156,10 +160,12 @@
                               onclick="handleCheckbox(this)"> Lesser known British car brands</label>
                 <label><input type="checkbox" name="manufacturerName" value="Jaguar" onclick="handleCheckbox(this)">
                     Jaguar</label>
-                <label><input type="checkbox" name="manufacturerName" value="Land_Rover" onclick="handleCheckbox(this)"> Land
+                <label><input type="checkbox" name="manufacturerName" value="Land_Rover" onclick="handleCheckbox(this)">
+                    Land
                     Rover</label>
                 <label><input type="checkbox" name="manufacturerName" value="MINI" onclick="handleCheckbox(this)"> MINI</label>
-                <label><input type="checkbox" name="manufacturerName" value="Rolls_Royce" onclick="handleCheckbox(this)">
+                <label><input type="checkbox" name="manufacturerName" value="Rolls_Royce"
+                              onclick="handleCheckbox(this)">
                     Rolls-Royce</label>
             </div>
             <div class="row">
@@ -191,11 +197,36 @@
         <button type="button" onclick="uncheckAllCheckboxes()">Uncheck All Checkboxes</button>
     </div>
 </div>
-
+<div id="load-wrapp" class="load-wrapp">
+    <p class="lading-title">carsonsale.info</p>
+    <div class="load">
+        <div class="spinner">
+            <div class="bubble-1">
+                <svg width="20" height="20" viewBox="0 0 100 100">
+                    <path class="random-fill" d="M50 2.5 L95 25 L95 75 L50 97.5 L5 75 L5 25 Z"></path>
+                </svg>
+            </div>
+            <div class="bubble-2">
+                <svg width="20" height="20" viewBox="0 0 100 100">
+                    <path class="random-fill" d="M50 2.5 L95 25 L95 75 L50 97.5 L5 75 L5 25 Z"></path>
+                </svg>
+            </div>
+            <div class="bubble-3">
+                <svg width="20" height="20" viewBox="0 0 100 100">
+                    <path class="random-fill" d="M50 2.5 L95 25 L95 75 L50 97.5 L5 75 L5 25 Z"></path>
+                </svg>
+            </div>
+            <div class="bubble-4">
+                <svg width="20" height="20" viewBox="0 0 100 100">
+                    <path class="random-fill" d="M50 2.5 L95 25 L95 75 L50 97.5 L5 75 L5 25 Z"></path>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="map-chart-area"></div>
 <div id="chart-area"></div>
-<div id="pie-chart-area" class="row"></div>
-
+<div id="pie-chart-area"></div>
 </body>
 
 <!--External JS libraries-->

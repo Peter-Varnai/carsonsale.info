@@ -1,0 +1,105 @@
+/* =Elements style
+---------------------- */
+.load-wrapp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.loding-title {
+    font-size: 1.2em;
+}
+
+.spinner {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.bubble-1,
+.bubble-2,
+.bubble-3,
+.bubble-4 {
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 25px;
+}
+
+.bubble-2 {
+    top: auto;
+    bottom: 0;
+}
+
+.bubble-3 {
+    top: auto;
+    bottom: 0;
+    right: 0;
+}
+
+.bubble-4 {
+    top: auto;
+    right: 0;
+}
+
+.random-fill {
+    opacity: 70%;
+    stroke-width: 2px;
+    stroke: #000000d6;
+}
+
+
+/* =Animate the stuff
+------------------------ */
+.load {
+    transform: rotate(-45deg);
+}
+
+.load .spinner {
+    animation: loadingI 3s linear infinite;
+}
+
+.load .bubble-1,
+.load .bubble-2,
+.load .bubble-3,
+.load .bubble-4 {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.load .bubble-2 {
+    animation-delay: -0.5s;
+}
+
+.load .bubble-3 {
+    animation-delay: -1s;
+}
+
+.load .bubble-4 {
+    animation-delay: -1.5s;
+}
+
+
+@keyframes loadingI {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+

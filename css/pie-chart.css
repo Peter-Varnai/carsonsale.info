@@ -3,9 +3,13 @@
     flex-direction: column;
     position: absolute;
     top: 3%;
-    right: 24px;
-    max-width: 160px;
+    right: 0;
+    max-width: 200px;
     margin-left: auto;
+}
+
+.pieDib {
+    margin-left: 20px;
 }
 
 .pie-svg {
@@ -14,6 +18,9 @@
 
 .pie-legend-svg {
     position: static;
+    margin-left: auto;
+    margin-right: 12px;
+    font-size: 0.8em;
 }
 
 .pie-group path {
@@ -24,11 +31,17 @@
 }
 
 .legend-title {
-    margin: 2em;
+    margin: 2em 1em;
+}
+
+.pie-title {
+    display: flex;
+    margin: 3px 0 12px 0;
+
 }
 
 .smaller-legend-title {
-    margin: 1em;
+    margin: 0.2em 0.7em;
 }
 
 .diesel {

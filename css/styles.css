@@ -26,7 +26,7 @@ body {
 }
 
 
-.hexGraph path {
+.hexGraph {
     opacity: 40%;
     stroke: #000000d6;
 }
@@ -78,8 +78,6 @@ body {
 .container.openned {
     display: flex;
 }
-
-
 
 .navbar-menus {
     margin-top: 1em;

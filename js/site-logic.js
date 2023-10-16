@@ -60,7 +60,7 @@ function handleCheckbox(checked) {
             selectedNames.push(checkboxes[i].value);
         }
     }
-    if (selectedNames.length > 3) {
+    if (selectedNames.length > 2) {
         for (const checkbox of checkboxes) {
             if (checkbox.checked && checkbox.value !== clickedCheckbox) {
                 checkbox.checked = false

@@ -135,6 +135,8 @@ const hexbin = d3.hexbin()
 function addHexGraph(data) {
     for (const key of data.keys()) {
         const dataGroup = data.get(key)
+        console.log('Data groups')
+        console.log(key)
         const bin = hexbin(dataGroup.map(d => (
             {
                 xy: projection([d[4], d[3]]),
@@ -156,7 +158,7 @@ function addHexGraph(data) {
             .data(bin)
             .join("path")
             .attr("transform", d => `translate(${d.x},${d.y})`)
-            .attr("class", "hexPath")
+            .attr("class", `${key}-path`)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
             .attr("d", "m0,0l0,0l0,0l0,0l0,0l0,0z")

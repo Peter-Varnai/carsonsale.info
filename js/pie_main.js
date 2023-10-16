@@ -34,51 +34,50 @@ function removePie() {
 }
 
 
-function fuelTypeCheck(fType) {
-    const fuelType1 = ["Diesel", "Gasoline", "Hybrid"];
-    const fuelType2 = ["Electric/Diesel", "Electric/Gasoline"];
-
-    if (fuelType1.includes(fType)) {
-        return fType.toLowerCase();
-    } else if (fuelType2.includes(fType)) {
-        return "hybrid";
-    } else if (fType === "Electric") {
-        return "electric";
-    } else {
-        // console.log(fType)
-        return "others";
-    }
-}
-
-
-function fuelTypeDataCorrector(map) {
-    if (map.has("Electric/Diesel" || map.has("Elecric/Gasoline"))) {
-        const electricDieselArray = map.get("Electric/Diesel");
-        if (map.has("Hybrid")) {
-            const hybridArray = map.get("Hybrid");
-            map.set("Hybrid", hybridArray.concat(electricDieselArray));
-        } else {
-            map.set("Hybrid", electricDieselArray);
-        }
-        map.delete("Electric/Diesel")
-        map.delete("Electric/Gasoline")
-    }
-    if (map.has("Gas")) {
-        const gasArray = map.get("Gas")
-        if (map.has("Others")) {
-            const othersArray = map.get("Others")
-            map.set("Others", othersArray.concat(gasArray))
-        } else {
-            map.set("others", othersArray)
-        }
-        map.delete("Gas")
-    }
-    return map;
-}
+// function fuelTypeCheck(fType) {
+//     const fuelType1 = ["Diesel", "Gasoline", "Hybrid"];
+//     const fuelType2 = ["Electric/Diesel", "Electric/Gasoline"];
+//
+//     if (fuelType1.includes(fType)) {
+//         return fType.toLowerCase();
+//     } else if (fuelType2.includes(fType)) {
+//         return "hybrid";
+//     } else if (fType === "Electric") {
+//         return "electric";
+//     } else {
+//         // console.log(fType)
+//         return "others";
+//     }
+// }
+//
+//
+// function fuelTypeDataCorrector(map) {
+//     if (map.has("Electric/Diesel" || map.has("Elecric/Gasoline"))) {
+//         const electricDieselArray = map.get("Electric/Diesel");
+//         if (map.has("Hybrid")) {
+//             const hybridArray = map.get("Hybrid");
+//             map.set("Hybrid", hybridArray.concat(electricDieselArray));
+//         } else {
+//             map.set("Hybrid", electricDieselArray);
+//         }
+//         map.delete("Electric/Diesel")
+//         map.delete("Electric/Gasoline")
+//     }
+//     if (map.has("Gas")) {
+//         const gasArray = map.get("Gas")
+//         if (map.has("Others")) {
+//             const othersArray = map.get("Others")
+//             map.set("Others", othersArray.concat(gasArray))
+//         } else {
+//             map.set("others", othersArray)
+//         }
+//         map.delete("Gas")
+//     }
+//     return map;
+// }
 
 
 function addPie(dataIn) {
-
     const fuelTypes = []
     for (const key of dataIn.keys()) {
         const data = dataIn.get(key)
@@ -86,6 +85,23 @@ function addPie(dataIn) {
         const pieDiv = d3.select("#pie-chart-area")
             .append('div')
             .attr('class', 'pieDiv')
+
+        const pieTitle = pieDiv.append("div")
+            .attr("class", "pie-title")
+
+        pieTitle.append('svg')
+            .attr("height", "100%")
+            .attr("width", "100%")
+            .attr("viewBox","0 0 100 100")
+            .style("max-height", "30px")
+            .style("max-width", "30px")
+            .append("path")
+            .attr("d","M50 2.5 L95 25 L95 75 L50 97.5 L5 75 L5 25 Z")
+            .attr("class", `${carManufacturer}-path`)
+
+
+        pieTitle.append('p').text(carManufacturer)
+            .attr("class", "smaller-legend-title")
 
         const pieSvg = pieDiv.append("svg")
             .attr("width", WIDTH)
@@ -139,11 +155,7 @@ function addPie(dataIn) {
             .attr("opacity", 0)
             .transition().duration(300).delay((d, i) => i * 200)
             .attr("opacity", 1)
-
-        pieDiv.append('p').text(carManufacturer)
-            .attr("class", "smaller-legend-title")
     }
-
 
 
     // ADDING LEGEND
@@ -164,13 +176,14 @@ function addPie(dataIn) {
             return `translate(12, ${(i + 1) * 30})`
         })
 
+    legend.append("circle")
+        .attr("r", 8)
+
     legend.append("text")
         .text(d => d)
         .attr("fill", "black")
         .attr("transform", "translate(18,5)")
-
-    legend.append("circle")
-        .attr("r", 10)
+        .attr('class', 'pie-legend-text')
 
     legend.attr("opacity", 0)
         .transition().duration(300).delay((d, i) => i * 200)

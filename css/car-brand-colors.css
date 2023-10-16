@@ -1,619 +1,940 @@
-.audi path {
-	fill: rgb(192, 201, 131)
+
+.audi-path {
+    fill: rgb(96, 151, 89);
+    opacity: 60%;
+    stroke: #000000d6;
+}
+
+.bmw-path {
+    fill: rgb(121, 84, 74);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.bmw path {
-	fill: rgb(36, 24, 62)
+.fiat-path {
+    fill: rgb(111, 64, 172);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.fiat path {
-	fill: rgb(41, 41, 172)
+.ford-path {
+    fill: rgb(189, 98, 49);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ford path {
-	fill: rgb(228, 156, 120)
+.hyundai-path {
+    fill: rgb(157, 39, 185);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.hyundai path {
-	fill: rgb(159, 204, 115)
+.kia-path {
+    fill: rgb(146, 138, 211);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.kia path {
-	fill: rgb(139, 115, 231)
+.mazda-path {
+    fill: rgb(199, 13, 251);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mazda path {
-	fill: rgb(201, 217, 162)
+.mercedes_benz-path {
+    fill: rgb(160, 47, 198);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mercedes_benz path {
-	fill: rgb(64, 187, 10)
+.opel-path {
+    fill: rgb(126, 31, 176);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.opel path {
-	fill: rgb(37, 65, 236)
+.renault-path {
+    fill: rgb(150, 219, 12);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.renault path {
-	fill: rgb(124, 109, 57)
+.seat-path {
+    fill: rgb(56, 242, 71);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.seat path {
-	fill: rgb(149, 175, 50)
+.skoda-path {
+    fill: rgb(19, 65, 6);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.skoda path {
-	fill: rgb(197, 111, 110)
+.toyota-path {
+    fill: rgb(18, 56, 68);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.toyota path {
-	fill: rgb(175, 15, 209)
+.volvo-path {
+    fill: rgb(30, 213, 68);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.volvo path {
-	fill: rgb(180, 226, 176)
+.vw-path {
+    fill: rgb(106, 144, 84);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.vw path {
-	fill: rgb(60, 156, 51)
+.abarth-path {
+    fill: rgb(160, 51, 173);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.abarth path {
-	fill: rgb(80, 180, 62)
+.aiways-path {
+    fill: rgb(69, 124, 130);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.aiways path {
-	fill: rgb(0, 246, 134)
+.aixam-path {
+    fill: rgb(64, 232, 39);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.aixam path {
-	fill: rgb(40, 70, 129)
+.alfa_romeo-path {
+    fill: rgb(66, 233, 66);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.alfa_romeo path {
-	fill: rgb(255, 223, 45)
+.alpina-path {
+    fill: rgb(126, 230, 88);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.alpina path {
-	fill: rgb(128, 168, 10)
+.alpine-path {
+    fill: rgb(18, 45, 119);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.alpine path {
-	fill: rgb(254, 46, 122)
+.aston_martin-path {
+    fill: rgb(155, 67, 193);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.aston_martin path {
-	fill: rgb(135, 46, 45)
+.austin-path {
+    fill: rgb(89, 140, 239);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.austin path {
-	fill: rgb(0, 163, 146)
+.bentley-path {
+    fill: rgb(58, 252, 166);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.bentley path {
-	fill: rgb(29, 212, 110)
+.british_leyland-path {
+    fill: rgb(51, 181, 187);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.british_leyland path {
-	fill: rgb(205, 217, 253)
+.buick-path {
+    fill: rgb(115, 89, 153);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.buick path {
-	fill: rgb(73, 156, 173)
+.byd-path {
+    fill: rgb(101, 147, 187);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.byd path {
-	fill: rgb(182, 246, 210)
+.cadillac-path {
+    fill: rgb(156, 159, 215);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.cadillac path {
-	fill: rgb(122, 98, 178)
+.casalini-path {
+    fill: rgb(94, 138, 13);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.casalini path {
-	fill: rgb(75, 203, 234)
+.caterham-path {
+    fill: rgb(88, 200, 253);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.caterham path {
-	fill: rgb(35, 130, 71)
+.chevrolet-path {
+    fill: rgb(41, 184, 143);
+    opacity: 60%;
+    stroke: #000000d6;
 }
+
+.chevrolet_
 
-.chevrolet path {
-	fill: rgb(47, 32, 215)
+/
+_daewoo-path {
+    fill: rgb(116, 70, 166);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.chevrolet___daewoo path {
-	fill: rgb(196, 248, 48)
+.chrysler-path {
+    fill: rgb(158, 119, 219);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.chrysler path {
-	fill: rgb(158, 84, 30)
+.citroen-path {
+    fill: rgb(118, 99, 148);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.citroen path {
-	fill: rgb(178, 105, 171)
+.corvette-path {
+    fill: rgb(80, 51, 71);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.corvette path {
-	fill: rgb(137, 243, 72)
+.cupra-path {
+    fill: rgb(60, 64, 118);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.cupra path {
-	fill: rgb(8, 30, 3)
+.dacia-path {
+    fill: rgb(85, 223, 146);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.dacia path {
-	fill: rgb(255, 37, 243)
+.daihatsu-path {
+    fill: rgb(110, 210, 112);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.daihatsu path {
-	fill: rgb(239, 97, 180)
+.dodge-path {
+    fill: rgb(157, 21, 28);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.dodge path {
-	fill: rgb(124, 105, 222)
+.ds_automobiles-path {
+    fill: rgb(79, 129, 170);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ds_automobiles path {
-	fill: rgb(236, 59, 43)
+.eli-path {
+    fill: rgb(204, 136, 148);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.eli path {
-	fill: rgb(141, 224, 163)
+.ferrari-path {
+    fill: rgb(98, 75, 132);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ferrari path {
-	fill: rgb(149, 200, 245)
+.gmc-path {
+    fill: rgb(195, 59, 32);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.gmc path {
-	fill: rgb(34, 6, 52)
+.graf_carello-path {
+    fill: rgb(60, 70, 185);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.graf_carello path {
-	fill: rgb(82, 126, 62)
+.honda-path {
+    fill: rgb(82, 53, 242);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.honda path {
-	fill: rgb(134, 62, 146)
+.hummer-path {
+    fill: rgb(196, 205, 154);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.hummer path {
-	fill: rgb(177, 125, 197)
+.ineos-path {
+    fill: rgb(86, 38, 35);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ineos path {
-	fill: rgb(153, 255, 111)
+.infiniti-path {
+    fill: rgb(196, 117, 237);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.infiniti path {
-	fill: rgb(204, 243, 204)
+.isuzu-path {
+    fill: rgb(47, 152, 124);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.isuzu path {
-	fill: rgb(78, 170, 184)
+.iveco-path {
+    fill: rgb(132, 152, 192);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.iveco path {
-	fill: rgb(130, 154, 95)
+.jac-path {
+    fill: rgb(165, 173, 163);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.jac path {
-	fill: rgb(175, 22, 234)
+.jaguar-path {
+    fill: rgb(90, 109, 23);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.jaguar path {
-	fill: rgb(205, 141, 237)
+.jeep-path {
+    fill: rgb(186, 67, 146);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.jeep path {
-	fill: rgb(182, 236, 180)
+.ktm-path {
+    fill: rgb(210, 115, 67);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ktm path {
-	fill: rgb(115, 199, 171)
+.lada-path {
+    fill: rgb(137, 187, 252);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.lada path {
-	fill: rgb(59, 27, 47)
+.lamborghini-path {
+    fill: rgb(165, 165, 125);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.lamborghini path {
-	fill: rgb(247, 22, 201)
+.lancia-path {
+    fill: rgb(136, 31, 175);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.lancia path {
-	fill: rgb(60, 224, 91)
+.land_rover-path {
+    fill: rgb(240, 112, 242);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.land_rover path {
-	fill: rgb(140, 55, 109)
+.lexus-path {
+    fill: rgb(146, 143, 245);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.lexus path {
-	fill: rgb(3, 152, 118)
+.ligier-path {
+    fill: rgb(235, 176, 83);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ligier path {
-	fill: rgb(196, 185, 48)
+.lincoln-path {
+    fill: rgb(39, 115, 120);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.lincoln path {
-	fill: rgb(219, 34, 53)
+.lotus-path {
+    fill: rgb(114, 122, 29);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.lotus path {
-	fill: rgb(184, 207, 162)
+.mahindra-path {
+    fill: rgb(127, 34, 214);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mahindra path {
-	fill: rgb(195, 230, 164)
+.man-path {
+    fill: rgb(226, 105, 100);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.man path {
-	fill: rgb(143, 219, 212)
+.maserati-path {
+    fill: rgb(115, 233, 34);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.maserati path {
-	fill: rgb(214, 75, 111)
+.maybach-path {
+    fill: rgb(81, 67, 224);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.maybach path {
-	fill: rgb(108, 207, 219)
+.mclaren-path {
+    fill: rgb(197, 193, 125);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mclaren path {
-	fill: rgb(246, 136, 149)
+.mercury-path {
+    fill: rgb(91, 41, 170);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mercury path {
-	fill: rgb(109, 29, 0)
+.mg-path {
+    fill: rgb(13, 104, 181);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mg path {
-	fill: rgb(151, 68, 114)
+.microcar-path {
+    fill: rgb(216, 192, 156);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.microcar path {
-	fill: rgb(109, 2, 218)
+.mini-path {
+    fill: rgb(244, 53, 12);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mini path {
-	fill: rgb(16, 146, 226)
+.mitsubishi-path {
+    fill: rgb(26, 173, 130);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mitsubishi path {
-	fill: rgb(139, 238, 179)
+.morgan-path {
+    fill: rgb(123, 216, 214);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.morgan path {
-	fill: rgb(200, 235, 131)
+.nissan-path {
+    fill: rgb(224, 116, 177);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.nissan path {
-	fill: rgb(224, 240, 227)
+.peugeot-path {
+    fill: rgb(97, 164, 160);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.peugeot path {
-	fill: rgb(69, 21, 80)
+.polestar-path {
+    fill: rgb(172, 70, 48);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.polestar path {
-	fill: rgb(180, 19, 146)
+.pontiac-path {
+    fill: rgb(20, 150, 165);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.pontiac path {
-	fill: rgb(230, 60, 164)
+.porsche-path {
+    fill: rgb(180, 137, 144);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.porsche path {
-	fill: rgb(4, 72, 229)
+.puch-path {
+    fill: rgb(123, 113, 188);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.puch path {
-	fill: rgb(202, 231, 205)
+.rolls_royce-path {
+    fill: rgb(89, 252, 123);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.rolls_royce path {
-	fill: rgb(252, 192, 72)
+.rover-path {
+    fill: rgb(217, 147, 246);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.rover path {
-	fill: rgb(225, 175, 184)
+.saab-path {
+    fill: rgb(9, 151, 109);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.saab path {
-	fill: rgb(177, 237, 164)
+.smart-path {
+    fill: rgb(140, 255, 65);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.smart path {
-	fill: rgb(251, 128, 141)
+.ssangyong-path {
+    fill: rgb(30, 255, 94);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ssangyong path {
-	fill: rgb(148, 49, 66)
+.subaru-path {
+    fill: rgb(1, 157, 26);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.subaru path {
-	fill: rgb(221, 123, 127)
+.suzuki-path {
+    fill: rgb(208, 157, 131);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.suzuki path {
-	fill: rgb(171, 143, 208)
+.talbot-path {
+    fill: rgb(185, 203, 252);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.talbot path {
-	fill: rgb(26, 24, 53)
+.tazzari-path {
+    fill: rgb(104, 74, 163);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.tazzari path {
-	fill: rgb(75, 215, 195)
+.tesla-path {
+    fill: rgb(164, 215, 175);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.tesla path {
-	fill: rgb(235, 19, 170)
+.trabant-path {
+    fill: rgb(230, 31, 123);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.trabant path {
-	fill: rgb(84, 39, 211)
+.triumph-path {
+    fill: rgb(119, 237, 72);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.triumph path {
-	fill: rgb(69, 252, 195)
+.zhidou-path {
+    fill: rgb(145, 117, 167);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.zhidou path {
-	fill: rgb(193, 119, 107)
+.sonstige-path {
+    fill: rgb(218, 11, 113);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.sonstige path {
-	fill: rgb(11, 157, 160)
+.sportequipe-path {
+    fill: rgb(150, 11, 195);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.sportequipe path {
-	fill: rgb(152, 19, 157)
+.austin_healey-path {
+    fill: rgb(186, 207, 250);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.austin_healey path {
-	fill: rgb(214, 29, 223)
+.tata-path {
+    fill: rgb(150, 97, 78);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.tata path {
-	fill: rgb(148, 234, 55)
+.bristol-path {
+    fill: rgb(93, 232, 238);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.bristol path {
-	fill: rgb(220, 141, 48)
+.bugatti-path {
+    fill: rgb(177, 203, 191);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.bugatti path {
-	fill: rgb(160, 242, 5)
+.caravans_wohnm-path {
+    fill: rgb(141, 19, 6);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.caravans_wohnm path {
-	fill: rgb(196, 158, 28)
+.carver-path {
+    fill: rgb(246, 54, 71);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.carver path {
-	fill: rgb(2, 96, 121)
+.cenntro-path {
+    fill: rgb(9, 100, 224);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.cenntro path {
-	fill: rgb(52, 40, 228)
+.changhe-path {
+    fill: rgb(133, 185, 118);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.changhe path {
-	fill: rgb(24, 130, 226)
+.chatenet-path {
+    fill: rgb(48, 122, 155);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.chatenet path {
-	fill: rgb(88, 209, 51)
+.elaris-path {
+    fill: rgb(185, 61, 78);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.elaris path {
-	fill: rgb(118, 213, 10)
+.zaz-path {
+    fill: rgb(232, 158, 131);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.zaz path {
-	fill: rgb(194, 40, 114)
+.innocenti-path {
+    fill: rgb(187, 47, 155);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.innocenti path {
-	fill: rgb(116, 44, 245)
+.ferrar-path {
+    fill: rgb(119, 154, 208);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ferrar path {
-	fill: rgb(191, 226, 58)
+.reliant-path {
+    fill: rgb(171, 75, 155);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.reliant path {
-	fill: rgb(70, 203, 155)
+.mitsuoka-path {
+    fill: rgb(21, 106, 69);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mitsuoka path {
-	fill: rgb(104, 86, 119)
+.gaz-path {
+    fill: rgb(54, 35, 106);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.gaz path {
-	fill: rgb(133, 146, 160)
+.wiesmann-path {
+    fill: rgb(197, 112, 24);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.wiesmann path {
-	fill: rgb(114, 94, 59)
+.karma-path {
+    fill: rgb(33, 228, 123);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.karma path {
-	fill: rgb(177, 69, 217)
+.nsu-path {
+    fill: rgb(55, 185, 225);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.nsu path {
-	fill: rgb(53, 20, 254)
+.dr-path {
+    fill: rgb(137, 116, 129);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.dr path {
-	fill: rgb(202, 157, 210)
+.militem-path {
+    fill: rgb(230, 203, 11);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.militem path {
-	fill: rgb(29, 123, 81)
+.iso-path {
+    fill: rgb(68, 164, 201);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.iso path {
-	fill: rgb(137, 220, 233)
+.daf-path {
+    fill: rgb(153, 65, 181);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.daf path {
-	fill: rgb(171, 100, 207)
+.vaz-path {
+    fill: rgb(73, 151, 187);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.vaz path {
-	fill: rgb(114, 204, 110)
+.lynk-path {
+    fill: rgb(18, 185, 82);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.lynk path {
-	fill: rgb(18, 66, 211)
+.ds-path {
+    fill: rgb(199, 248, 70);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ds path {
-	fill: rgb(234, 205, 98)
+.e.go-path {
+    fill: rgb(102, 194, 58);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.e.go path {
-	fill: rgb(85, 225, 3)
+.9
+ff-path {
+    fill: rgb(180, 80, 64);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ruf path {
-	fill: rgb(191, 47, 164)
+.ruf-path {
+    fill: rgb(181, 135, 222);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.silence path {
-	fill: rgb(143, 144, 59)
+.silence-path {
+    fill: rgb(240, 213, 147);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.great path {
-	fill: rgb(239, 246, 152)
+.great-path {
+    fill: rgb(95, 3, 201);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.delorean path {
-	fill: rgb(157, 49, 84)
+.delorean-path {
+    fill: rgb(132, 87, 8);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.vem path {
-	fill: rgb(54, 118, 229)
+.vem-path {
+    fill: rgb(28, 57, 139);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.ac path {
-	fill: rgb(216, 130, 74)
+.ac-path {
+    fill: rgb(196, 24, 164);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.vanderhall path {
-	fill: rgb(99, 254, 20)
+.vanderhall-path {
+    fill: rgb(173, 152, 165);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.santana path {
-	fill: rgb(67, 53, 189)
+.santana-path {
+    fill: rgb(59, 55, 130);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.amphicar path {
-	fill: rgb(37, 195, 65)
+.amphicar-path {
+    fill: rgb(114, 139, 171);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.panther path {
-	fill: rgb(163, 209, 4)
+.panther-path {
+    fill: rgb(72, 230, 104);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.moskvich path {
-	fill: rgb(100, 2, 18)
+.moskvich-path {
+    fill: rgb(247, 106, 39);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.wenckstern path {
-	fill: rgb(136, 157, 82)
+.wenckstern-path {
+    fill: rgb(160, 2, 86);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.alba path {
-	fill: rgb(83, 129, 181)
+.alba-path {
+    fill: rgb(40, 208, 102);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.studebaker path {
-	fill: rgb(172, 143, 187)
+.studebaker-path {
+    fill: rgb(52, 202, 47);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.de path {
-	fill: rgb(104, 167, 8)
+.de-path {
+    fill: rgb(159, 127, 148);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.acura path {
-	fill: rgb(9, 35, 119)
+.acura-path {
+    fill: rgb(164, 122, 168);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.shelby path {
-	fill: rgb(8, 78, 237)
+.shelby-path {
+    fill: rgb(111, 160, 158);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.maxus path {
-	fill: rgb(132, 83, 171)
+.maxus-path {
+    fill: rgb(61, 136, 64);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.minauto path {
-	fill: rgb(37, 225, 36)
+.minauto-path {
+    fill: rgb(224, 46, 65);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.mpm path {
-	fill: rgb(72, 135, 10)
+.mpm-path {
+    fill: rgb(88, 200, 206);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.wartburg path {
-	fill: rgb(15, 209, 12)
+.wartburg-path {
+    fill: rgb(201, 132, 250);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.haval path {
-	fill: rgb(202, 78, 219)
+.haval-path {
+    fill: rgb(137, 107, 96);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.tasso path {
-	fill: rgb(109, 20, 127)
+.tasso-path {
+    fill: rgb(34, 141, 172);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.hurtan path {
-	fill: rgb(49, 83, 105)
+.hurtan-path {
+    fill: rgb(83, 126, 186);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.jensen path {
-	fill: rgb(110, 70, 73)
+.jensen-path {
+    fill: rgb(174, 177, 45);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.donkervoort path {
-	fill: rgb(212, 51, 118)
+.donkervoort-path {
+    fill: rgb(79, 93, 72);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.giotti path {
-	fill: rgb(109, 153, 223)
+.giotti-path {
+    fill: rgb(101, 70, 144);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.baic path {
-	fill: rgb(116, 146, 200)
+.baic-path {
+    fill: rgb(78, 174, 225);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.grecav path {
-	fill: rgb(124, 24, 169)
+.grecav-path {
+    fill: rgb(12, 34, 245);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.others path {
-	fill: rgb(156, 60, 195)
+.others-path {
+    fill: rgb(18, 19, 250);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.galloper path {
-	fill: rgb(51, 50, 229)
+.galloper-path {
+    fill: rgb(193, 174, 233);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.dallara path {
-	fill: rgb(229, 134, 80)
+.dallara-path {
+    fill: rgb(113, 252, 24);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.emc path {
-	fill: rgb(96, 22, 68)
+.emc-path {
+    fill: rgb(224, 1, 75);
+    opacity: 60%;
+    stroke: #000000d6;
 }
 
-.bellier path {
-	fill: rgb(143, 21, 21)
+.bellier-path {
+    fill: rgb(69, 67, 10);
+    opacity: 60%;
+    stroke: #000000d6;
 }
