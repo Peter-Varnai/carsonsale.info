@@ -60,7 +60,9 @@ function addHexGraph(data) {
 
 function removeHexGraph() {
     const t = d3.transition().duration(600)
-    d3.selectAll(".hexPath").transition(t).attr("d", "m0,0l0,0l0,0l0,0l0,0l0,0z").remove()
+    d3.selectAll(".hexGraph").transition(t)
+        .attr("d", "m0,0l0,0l0,0l0,0l0,0l0,0z")
+        .remove()
 }
 
 hexGroup.raise()

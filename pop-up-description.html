@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <!--    <link rel="stylesheet" href="css/styles.css">-->
+    <style>
+        ul {
+            margin-bottom: 2em;
+        }
+
+        li {
+            font-style: italic;
+            /*list-style: none;*/
+            margin: 0.3em 0;
+            /*margin-left: 2em;*/
+        }
+
+        .about-pop-up {
+            height: 600px;
+            overflow: auto;
+            font-size: 1em;
+            font-family: 'Lato', sans-serif;
+            max-width: 600px;
+        }
+
+        .footnotes {
+            margin-top: 4em;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="about-pop-up">
+    <p>
+        In June I conducted an extensive web scrape on the databases of two of the major websites I know of that are
+        dedicated to selling used cars, willhaben.at and autoscoute24.com.</p>
+    <p>
+        The data arrived at a quiet wage, users have often submitted their cars on the website to sell with very little
+        or
+        wrong information. The formatting of the mileage counter on the cars have been awkwardly different, the engine
+        strength of cars have been varying suspiciously a lot within the many of the same models of a given car brand.
+        Initially, on each website I was looking for the following information:
+    </p>
+    <ol>
+        <li>manufacturer</li>
+        <li>model</li>
+        <li>mileage (km)</li>
+        <li>engine power (hp)</li>
+        <li>date of manufacturing</li>
+        <li>fuel type (gasoline, diesel, electric, hybrid ect.)</li>
+        <li>gears type (manual/automatic)</li>
+        <li>price (€)</li>
+        <li>seller location (country code, town, postal code)</li>
+        <li>seller name</li>
+    </ol>
+    <p>
+        Not all of this information are part of this project now, there is room for this site to improve, more on this later.
+        Throughout a month using various python packages(1), my webscraper returned 170,000 used car advertisments
+        people
+        submitted in different European countries. Disclaimer: willhaben.at returned a disproportionate amount of
+        Austrian
+        advertisements, until I scrape at least as much used car ads (adjusted to population and GDP difference) from
+        neighboring countries too, the represented data carries a bias and is mostly accurate within Austria
+    </p>
+    <p>
+        To clean the gathered database of nan values and accidental duplicates, I used pandas. Pandas’ toolset was
+        proven to be extremely useful in enriching the data, the following assumptions were made to fill in missing
+        values from
+        data rows:
+    </p>
+    <ul>
+        <li>cars of the same manufacturer and model have the same fuel type</li>
+        <li>cars of the same manufacturer and model should have their engine power similar to the mean of the same car
+            type +/- the standard deviation of the same car engine power of the same car types
+        </li>
+        <li>cars of the same manufacturer and model have an identical gears type</li>
+    </ul>
+    <p>
+        the following actions were also necessary to clean the data and optimize its usability: </p>
+    <ul>
+        <li>advertisements with missing manufacturer or location values are dropped</li>
+        <li>Italian city names have had the postal code of the city attached in front of the city name, they had to be
+            separated
+        </li>
+        <li>Dutch city names had the short letters of the region where the city is found in attached in front of the
+            city name, they needed to be separated
+        </li>
+        <li>many advertisements have arrived with non-breaking spaces, non-breaking spaces are meant to be invisible,
+            they caused different types of type errors
+        </li>
+    </ul>
+
+
+    <p>
+        after it became clear that the focus of my project is a density map of the different car brands in Europe, the
+        city
+        names and their postal codes needed to be matched up with latitude and longitude coordinates, so the density map
+        can
+        be overlaid on a map. The only free and reliable source of information I could find was an open source api
+        called
+        geo-py. Geo-py returned the value pair I was looking for, and it only needed a town name and a two letter
+        country
+        code. After manually cross-examining its accuracy by checking the returned values on a map, I decided to use it.
+        Unfortunately, the api had a limit of 1 call/second. I needed to set up a function that keeps a log of the
+        values
+        that have already been paired up with lat-long values once, so the geo-py api doesn't need to answer a call for
+        all
+        the 170,000 entries. This way, the time it took to pair every occurring town in the database with lat-long
+        values
+        were reduced from 48 hours to just 3.
+    </p>
+    <ul class="footnotes">
+        1:
+        <li>PlayWright to scrape javascript based sites too</li>
+        <li>Selenyum to parse the returned html code as fast as
+            possible
+        </li>
+        <li>sql_model to store the data in a lightweight database</li>
+        <li>Insomnia was used to craft a request that tricks the back-end
+            of willhaben.at into thinking, a front-end is making a request to display advertisements. The returned json
+            message
+            contained every information I was looking for.
+        </li>
+    </ul>
+</div>
+</body>
+</html>

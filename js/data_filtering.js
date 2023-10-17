@@ -9,7 +9,6 @@ inputs.forEach(d => {
 })
 
 
-
 function update(selectedBrands) {
     const url = `https://carsonsale-api.vercel.app/${selectedBrands}`
     // const url = `http://127.0.0.1:8000/${selectedBrands}`
@@ -27,6 +26,11 @@ function update(selectedBrands) {
         mapData = data[1]
         drawMap(activeCC)
         hideLoadingIndicator()
+        if (!localStorage.getItem("aboutPopupShown")) {
+            toggleAboutPopup()
+            localStorage.setItem("aboutPopupShown", "true")
+
+        }
 
         const fuel = $('#fuel-type').val()
         const fuelFilData = dataFilMenu(fuel, 2, carsMapData)

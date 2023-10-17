@@ -52,7 +52,13 @@ function dataDesc(n) {
     dataDescN.html(`Number of cars on screen: <br><span style="font-size: 1.25em; font-weight: bold">${n} / 171032</span>`)
 }
 
+//______________FILTER BUTTON LOGIC_____________//
+const filterButton = document.getElementById("filterButton")
+const filterMenu = document.getElementById("filterMenu")
 
+filterButton.addEventListener("click", function () {
+    filterMenu.classList.toggle("openned")
+})
 
 
 //______________CHECKBOXES LOGIC________________//
@@ -86,9 +92,32 @@ function handleCheckbox(checked) {
     update(selectedCheckboxes)
 }
 
-
+function uncheckAllCheckboxes() {
+    var checkboxes = document.getElementsByName("manufacturerCheckbox")
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = false
+    }
+}
 
 handleCheckbox('bmw')
+
+
+// _________ABOUT WINDOW OPEN - CLOSE____________//
+function toggleAboutPopup() {
+    let popup = document.getElementById("aboutPopUp");
+    console.log(popup.style.display)
+    if (popup.style.display === "none") {
+        popup.style.display = "flex";
+
+    } else {
+        popup.style.display = "none";
+    }
+}
+
+
+document.getElementById("aboutPopUpX").addEventListener("click", toggleAboutPopup);
+document.getElementById("aboutPopUpButton").addEventListener("click", toggleAboutPopup);
+
 
 // function uncheckAllCheckboxes() {
 //     var checkboxes = document.getElementsByName("manufacturerName")
