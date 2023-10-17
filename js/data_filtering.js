@@ -8,11 +8,9 @@ inputs.forEach(d => {
     inputsList.push(d.value)
 })
 
-console.log(inputsList)
 
 
 function update(selectedBrands) {
-    console.log(selectedBrands)
     const url = `https://carsonsale-api.vercel.app/${selectedBrands}`
     // const url = `http://127.0.0.1:8000/${selectedBrands}`
 
@@ -32,18 +30,18 @@ function update(selectedBrands) {
 
         const fuel = $('#fuel-type').val()
         const fuelFilData = dataFilMenu(fuel, 2, carsMapData)
-        const groupedData = d3.group(fuelFilData, d => d[5])
+        const n = carsMapData.length
+        const groupedData = d3.group(carsMapData, d => d[5])
 
         removeHexGraph()
         addHexGraph(groupedData)
         removePie()
         addPie(groupedData)
-
+        dataDesc(n)
     })
 }
 
 function hideLoadingIndicator() {
-    console.log('hide load')
     document.getElementById('load-wrapp').classList.add('hidden');
 }
 

@@ -112,7 +112,6 @@ function addPie(dataIn) {
 
 
         const fuelTypeGroupData = d3.group(data, d => d[2])
-        console.log(fuelTypeGroupData)
         const aggregatedData = Array.from(fuelTypeGroupData.entries())
             .map(([fuelType, aggData]) => {
                 fuelTypes.includes(fuelType) ? undefined : fuelTypes.push(fuelType)
@@ -161,7 +160,7 @@ function addPie(dataIn) {
     // ADDING LEGEND
     const pieLegendSvg = d3.select("#pie-chart-area").append("svg")
         .attr("width", 90)
-        .attr("height", 245)
+        .attr("height", 180)
         .attr("class", "pie-legend-svg")
 
     let legends = pieLegendSvg.append("g")

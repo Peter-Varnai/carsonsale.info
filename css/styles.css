@@ -53,6 +53,7 @@ body {
     flex-direction: column;
     background-color: darkgray;
     transition: height 2.5s ease;
+    max-width: 480px;
 }
 
 .row .row {

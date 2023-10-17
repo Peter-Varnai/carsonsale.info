@@ -15,6 +15,7 @@
 
     <!-- Custom styling -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/data-description.css">
     <link rel="stylesheet" href="css/car-brand-colors.css">
     <link rel="stylesheet" href="css/pie-chart.css">
     <link rel="stylesheet" href="css/loading-anim.css">
@@ -68,8 +69,8 @@
                 <label><input type="checkbox" name="manufacturerName" value="opel" onclick="handleCheckbox(this)"> Opel</label>
                 <label><input type="checkbox" name="manufacturerName" value="vw" onclick="handleCheckbox(this)">
                     VW</label>
-                <label><input type="checkbox" name="manufacturerName" value="alpina,maybach"
-                              onclick="handleCheckbox(this)">Lesser known German car brands</label>
+                <!--                <label><input type="checkbox" name="manufacturerName" value="alpina,maybach"-->
+                <!--                              onclick="handleCheckbox(this)">Lesser known German car brands</label>-->
                 <label><input type="checkbox" name="manufacturerName" value="porsche" onclick="handleCheckbox(this)">
                     Porsche</label>
                 <label><input type="checkbox" name="manufacturerName" value="smart" onclick="handleCheckbox(this)">
@@ -81,8 +82,8 @@
                     Abarth</label>
                 <label><input type="checkbox" name="manufacturerName" value="alfa_romeo" onclick="handleCheckbox(this)">
                     Alfa Romeo</label>
-                <label><input type="checkbox" name="manufacturerName" value="casalini,lancia,tazzari"
-                              onclick="handleCheckbox(this)"> Lesser known Italian car brands</label>
+                <!--                <label><input type="checkbox" name="manufacturerName" value="casalini,lancia,tazzari"-->
+                <!--                              onclick="handleCheckbox(this)"> Lesser known Italian car brands</label>-->
                 <label><input type="checkbox" name="manufacturerName" value="ferrari" onclick="handleCheckbox(this)">
                     Ferrari</label>
                 <label><input type="checkbox" name="manufacturerName" value="lamborghini"
@@ -93,8 +94,8 @@
             </div>
             <div class="row us">
                 <label><input type="checkbox" name="manufacturerName" value="ford" onclick="handleCheckbox(this)"> Ford</label>
-                <label><input type="checkbox" name="manufacturerName" value="buick,gmc,lincoln,mercury,pontiac,corvette"
-                              onclick="handleCheckbox(this)"> Lesser known US car brands</label>
+                <!--                <label><input type="checkbox" name="manufacturerName" value="buick,gmc,lincoln,mercury,pontiac,corvette"-->
+                <!--                              onclick="handleCheckbox(this)"> Lesser known US car brands</label>-->
                 <label><input type="checkbox" name="manufacturerName" value="cadillac" onclick="handleCheckbox(this)">
                     Cadillac</label>
                 <label><input type="checkbox" name="manufacturerName" value="chevrolet" onclick="handleCheckbox(this)">
@@ -122,10 +123,10 @@
                     Renault</label>
                 <label><input type="checkbox" name="manufacturerName" value="Citroen" onclick="handleCheckbox(this)">
                     Citroën</label>
-                <label><input type="checkbox" name="manufacturerName" value="Ligier,Talbot"
-                              onclick="handleCheckbox(this)">
-                    Lesser known
-                    French car brands</label>
+                <!--                <label><input type="checkbox" name="manufacturerName" value="Ligier,Talbot"-->
+                <!--                              onclick="handleCheckbox(this)">-->
+                <!--                    Lesser known-->
+                <!--                    French car brands</label>-->
                 <label><input type="checkbox" name="manufacturerName" value="Peugeot" onclick="handleCheckbox(this)">
                     Peugeot</label>
             </div>
@@ -134,8 +135,8 @@
                     Mazda</label>
                 <label><input type="checkbox" name="manufacturerName" value="Toyota" onclick="handleCheckbox(this)">
                     Toyota</label>
-                <label><input type="checkbox" name="manufacturerName" value="Daihatsu,Infiniti,Isuzu,Subaru"
-                              onclick="handleCheckbox(this)"> Lesser known Japanees car brands</label>
+                <!--                <label><input type="checkbox" name="manufacturerName" value="Daihatsu,Infiniti,Isuzu,Subaru"-->
+                <!--                              onclick="handleCheckbox(this)"> Lesser known Japanees car brands</label>-->
                 <label><input type="checkbox" name="manufacturerName" value="Honda" onclick="handleCheckbox(this)">
                     Honda</label>
                 <label><input type="checkbox" name="manufacturerName" value="Lexus" onclick="handleCheckbox(this)">
@@ -156,8 +157,8 @@
                     Austin</label>
                 <label><input type="checkbox" name="manufacturerName" value="Bentley" onclick="handleCheckbox(this)">
                     Bentley</label>
-                <label><input type="checkbox" name="manufacturerName" value="Ineos,Lotus,Morgan,Rover,Triumph"
-                              onclick="handleCheckbox(this)"> Lesser known British car brands</label>
+                <!--                <label><input type="checkbox" name="manufacturerName" value="Ineos,Lotus,Morgan,Rover,Triumph"-->
+                <!--                              onclick="handleCheckbox(this)"> Lesser known British car brands</label>-->
                 <label><input type="checkbox" name="manufacturerName" value="Jaguar" onclick="handleCheckbox(this)">
                     Jaguar</label>
                 <label><input type="checkbox" name="manufacturerName" value="Land_Rover" onclick="handleCheckbox(this)">
@@ -190,11 +191,11 @@
                     Polestar</label>
             </div>
             <div class="row various">
-                <label><input type="checkbox" name="manufacturerName" value="Lada,Mahindra,KTM,Puch"
-                              onclick="handleCheckbox(this)"> Various smaller car types</label>
+                <!--                <label><input type="checkbox" name="manufacturerName" value="Lada,Mahindra,KTM,Puch"-->
+                <!--                              onclick="handleCheckbox(this)"> Various smaller car types</label>-->
             </div>
         </div>
-        <button type="button" onclick="uncheckAllCheckboxes()">Uncheck All Checkboxes</button>
+        <!--        <button type="button" onclick="uncheckAllCheckboxes()">Uncheck All Checkboxes</button>-->
     </div>
 </div>
 <div id="load-wrapp" class="load-wrapp">
@@ -227,6 +228,7 @@
 <div id="map-chart-area"></div>
 <div id="chart-area"></div>
 <div id="pie-chart-area"></div>
+<div id="data-description"></div>
 </body>
 
 <!--External JS libraries-->
@@ -248,8 +250,10 @@
 <script src="js/topo-json.js"></script>
 
 <!--Custom JS -->
+<script src="js/data-descr-about.js"></script>
 <script src="js/data_filtering.js"></script>
 <script src="js/map_main.js"></script>
+<script src="js/hex-pattern.js"></script>
 <script src="js/pie_main.js"></script>
 <script src="js/site-logic.js"></script>
 
