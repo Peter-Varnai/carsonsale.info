@@ -1,11 +1,11 @@
-//____________________________MAP ELEMENTS________________________//
+//___________________MAP ELEMENTS________________________//
 const mapSvg = d3.select('#map-chart-area').append('svg')
     .attr("width", "100%")
     .attr("height", "100%")
     .on("click", reset)
 
 const projection = d3.geoNaturalEarth1()
-    .center([13, 51])
+    .center([6, 51])
     .scale(4700)
 
 const mapMaiGroup = mapSvg.append("g")
@@ -49,7 +49,6 @@ function drawMap(activeList) {
         .append("path")
         .attr("d", path)
         .attr('class', d => d.properties.ISO_A2)
-        // .style("fill", d => activeList.includes(d.properties.ISO_A2) ? 'rgb(244, 244, 244)' : 'url(#emptyCountryPattern')
         .style("fill", d => {
             return activeList.includes(d.properties.ISO_A2) ? 'rgb(244, 244, 244)' : 'url(#emptyCountryPattern'
         })
@@ -111,24 +110,24 @@ graticulesG.append('path')
 
 
 // ______DOTS ON MAP (disabled)_____//
-const dotsGroup = mapMaiGroup.append('g')
-    .attr('class', 'dots')
-
-
-function updateMapDots() {
-    // CARS ON THE MAP AS DOTS
-    const dots = dotsGroup.selectAll("circle")
-        .data(limitedRandArray)
-
-    dots.exit().remove()
-
-    dots.enter().append("circle")
-        .attr("r", 1.4)
-        .attr("fill", "#009CB9")
-        .merge(dots)
-        .attr("cx", d => projection([d["longitude_coordinates"], d["latitude_coordinates"]])[0])
-        .attr("cy", d => projection([d["longitude_coordinates"], d["latitude_coordinates"]])[1])
-}
+// const dotsGroup = mapMaiGroup.append('g')
+//     .attr('class', 'dots')
+//
+//
+// function updateMapDots() {
+//     // CARS ON THE MAP AS DOTS
+//     const dots = dotsGroup.selectAll("circle")
+//         .data(limitedRandArray)
+//
+//     dots.exit().remove()
+//
+//     dots.enter().append("circle")
+//         .attr("r", 1.4)
+//         .attr("fill", "#009CB9")
+//         .merge(dots)
+//         .attr("cx", d => projection([d["longitude_coordinates"], d["latitude_coordinates"]])[0])
+//         .attr("cy", d => projection([d["longitude_coordinates"], d["latitude_coordinates"]])[1])
+// }
 
 
 //___FINAL ADJUSTMENTS TO MAP___//
@@ -137,10 +136,6 @@ mapSvg.call(zoom);
 
 
 //____MISCELANIOUS FUNCTIONS___//
-function printClasses(carBrands) {
-    const cssClasses = carBrands.map(brand => `.${brand} path \n{fill:${getRandomColor()}\n}\n`).join('\n')
-}
-
 
 function getRandomColor() {
     const r = Math.floor(Math.random() * 256)

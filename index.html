@@ -11,10 +11,6 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- jQuery styling -->
-    <!--    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
-
     <!--tooltip styling-->
     <link rel="stylesheet" href="css/d3-tip.css">
 
@@ -29,17 +25,18 @@
 <body>
 <!--FILTER BUTTON-->
 <button id="filterButton" type="button" class="style-free-button position-absolute ml-5">
-    <svg width="55px" height="55px" viewBox="0 0 24 24" fill="white">
+    <svg width="55px" height="55px" viewBox="0 0 24 24" style="border: 1px black solid;">
         <path class="filter_icon"
               d="M21 6H19M21 12H16M21 18H16M7 20V13.5612C7 13.3532 7 13.2492 6.97958 13.1497C6.96147 13.0615 6.93151 12.9761 6.89052 12.8958C6.84431 12.8054 6.77934 12.7242 6.64939 12.5617L3.35061 8.43826C3.22066 8.27583 3.15569 8.19461 3.10948 8.10417C3.06849 8.02393 3.03853 7.93852 3.02042 7.85026C3 7.75078 3 7.64677 3 7.43875V5.6C3 5.03995 3 4.75992 3.10899 4.54601C3.20487 4.35785 3.35785 4.20487 3.54601 4.10899C3.75992 4 4.03995 4 4.6 4H13.4C13.9601 4 14.2401 4 14.454 4.10899C14.6422 4.20487 14.7951 4.35785 14.891 4.54601C15 4.75992 15 5.03995 15 5.6V7.43875C15 7.64677 15 7.75078 14.9796 7.85026C14.9615 7.93852 14.9315 8.02393 14.8905 8.10417C14.8443 8.19461 14.7793 8.27583 14.6494 8.43826L11.3506 12.5617C11.2207 12.7242 11.1557 12.8054 11.1095 12.8958C11.0685 12.9761 11.0385 13.0615 11.0204 13.1497C11 13.2492 11 13.3532 11 13.5612V17L7 20Z"
-              stroke="#000000" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
+              stroke="#000000" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"></path>
     </svg>
 </button>
 <!--ABOUT WINDOW BUTTON-->
 <button id="aboutPopUpButton" type="button" class="style-free-button styledbutton">
-    <svg fill="#000000" width="55px" height="55px" viewBox="0 0 24 24">
+    <svg fill="#000000" width="55px" height="55px" viewBox="0 0 24 24" style="border: 1px black solid;">
         <path xmlns="http://www.w3.org/2000/svg" transform="scale(0.1)"
-              d="M92,96a4.0002,4.0002,0,0,1,4-4h64a4,4,0,0,1,0,8H96A4.0002,4.0002,0,0,1,92,96Zm4,36h64a4,4,0,0,0,0-8H96a4,4,0,0,0,0,8Zm32,24H96a4,4,0,0,0,0,8h32a4,4,0,0,0,0-8ZM220,48V156.68652a11.92221,11.92221,0,0,1-3.51514,8.48536l-51.313,51.31347A11.92174,11.92174,0,0,1,156.68652,220H48a12.01375,12.01375,0,0,1-12-12V48A12.01375,12.01375,0,0,1,48,36H208A12.01375,12.01375,0,0,1,220,48ZM48,212H156V159.99219a3.99988,3.99988,0,0,1,4-4h52V48a4.00458,4.00458,0,0,0-4-4H48a4.00458,4.00458,0,0,0-4,4V208A4.00458,4.00458,0,0,0,48,212Zm158.35107-48.00781H164v42.35058Z"/>
+              d="M92,96a4.0002,4.0002,0,0,1,4-4h64a4,4,0,0,1,0,8H96A4.0002,4.0002,0,0,1,92,96Zm4,36h64a4,4,0,0,0,0-8H96a4,4,0,0,0,0,8Zm32,24H96a4,4,0,0,0,0,8h32a4,4,0,0,0,0-8ZM220,48V156.68652a11.92221,11.92221,0,0,1-3.51514,8.48536l-51.313,51.31347A11.92174,11.92174,0,0,1,156.68652,220H48a12.01375,12.01375,0,0,1-12-12V48A12.01375,12.01375,0,0,1,48,36H208A12.01375,12.01375,0,0,1,220,48ZM48,212H156V159.99219a3.99988,3.99988,0,0,1,4-4h52V48a4.00458,4.00458,0,0,0-4-4H48a4.00458,4.00458,0,0,0-4,4V208A4.00458,4.00458,0,0,0,48,212Zm158.35107-48.00781H164v42.35058Z"></path>
+
     </svg>
 </button>
 
@@ -197,6 +194,11 @@
             <!--                              onclick="handleCheckbox(this)"> Chinees-->
             <!--                    car brands</label>-->
             <!--            </div>-->
+            <!--            <div class="row cn">-->
+            <!--                <label><input type="checkbox" name="manufacturerName" value="Aiways,BYD,JAC,ZhiDou"-->
+            <!--                              onclick="handleCheckbox(this)"> Chinees-->
+            <!--                    car brands</label>-->
+            <!--            </div>-->
             <div class="row se">
                 <label><input type="checkbox" name="manufacturerName" value="volvo" onclick="handleCheckbox(this)">
                     Volvo</label>
@@ -253,7 +255,7 @@
         </button>
         <div class="about-pop-up2">
             <div>
-                <h1>Exploring European Used Car Market Data</h1>
+                <h1 class="about-headline">Exploring European Used Car Market Data</h1>
 
                 <p>As a data analyst, I embarked on a fascinating project to explore and analyze the European used car
                     market. This project involved web scraping data from two prominent websites, willhaben.at and
@@ -261,7 +263,7 @@
                     and characteristics of various car brands across Europe. The project encompassed a variety of data
                     collection, preprocessing, and visualization tasks.</p>
 
-                <h2>Data Collection</h2>
+                <h2 class="about-headline">Data Collection</h2>
 
                 <p>My journey began in June, where I conducted an extensive web scraping operation to gather information
                     from these websites. The data presented several challenges, including inconsistent and often
@@ -271,7 +273,7 @@
                     price (in euros), seller location (comprising the country code, town, and postal code), and seller
                     names.</p>
 
-                <h2>Data Preprocessing</h2>
+                <h2 class="about-headline">Data Preprocessing</h2>
 
                 <p>The collected data required thorough cleaning and preprocessing. To tackle this, I utilized the
                     powerful Pandas library. Key assumptions were made to fill in missing values:</p>
@@ -285,7 +287,7 @@
                     <li>Uniformity in gear type was assumed for cars of the same manufacturer and model.</li>
                 </ul>
 
-                <p>Several other actions were taken to optimize the data:</p>
+                <p class="about-headline">Several other actions were taken to optimize the data:</p>
 
                 <ul>
                     <li>Advertisements with missing manufacturer or location values were removed.</li>
@@ -294,7 +296,7 @@
                     <li>Non-breaking spaces were addressed to eliminate various types of typing errors.</li>
                 </ul>
 
-                <h2>Data Enrichment and Mapping</h2>
+                <h2 class="about-headline">Data Enrichment and Mapping</h2>
 
                 <p>As the project evolved, the primary focus shifted towards creating a density map that visualized the
                     distribution of different car brands across Europe. To achieve this, the city names and their postal
@@ -303,22 +305,22 @@
                     track of previously paired town names and lat-long values, significantly reducing processing
                     time.</p>
 
-                <h2>Backend Setup and API</h2>
+                <h2 class="about-headline">Backend Setup and API</h2>
 
                 <p>To provide a seamless user experience and circumvent the need to download the entire CSV file
                     containing all scraped data when visiting the site, I set up a backend using Python's FastAPI. This
                     backend offers a URL that answers calls containing selected car brands from the website, allowing
                     users to access specific data efficiently.</p>
 
-                <h2>Key Skills and Tools</h2>
+                <h2 class="about-headline">Key Skills and Tools</h2>
 
                 <p>This project allowed me to hone various skills, such as web scraping using Playwright and Selenium,
-                    data preprocessing with Pandas, database management with sql, and crafting requests with
+                    data preprocessing with Pandas, database management using sql_model, and crafting requests with
                     tools like Insomnia. The ability to develop solutions for data cleaning, enrichment, and
                     visualization was at the core of this project, demonstrating my proficiency in data analysis and
                     problem-solving.</p>
 
-                <h2>Conclusion</h2>
+                <h2 class="about-headline">Conclusion</h2>
 
                 <p>Exploring and analyzing the European used car market data was a rewarding endeavor. The project
                     illuminated the challenges of dealing with real-world data and demonstrated the importance of data
