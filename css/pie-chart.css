@@ -43,6 +43,7 @@
 }
 
 .smaller-legend-title {
+    font-weight: bold;
     margin: 0.2em 0.7em;
 }
 

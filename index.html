@@ -13,7 +13,7 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- jQuery styling -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
 
     <!--tooltip styling-->
     <link rel="stylesheet" href="css/d3-tip.css">
@@ -27,7 +27,6 @@
 </head>
 
 <body>
-
 <!--FILTER BUTTON-->
 <button id="filterButton" type="button" class="style-free-button position-absolute ml-5">
     <svg width="55px" height="55px" viewBox="0 0 24 24" fill="white">
@@ -38,12 +37,11 @@
 </button>
 <!--ABOUT WINDOW BUTTON-->
 <button id="aboutPopUpButton" type="button" class="style-free-button styledbutton">
-     <svg fill="#000000" width="55px" height="55px" viewBox="0 0 24 24">
+    <svg fill="#000000" width="55px" height="55px" viewBox="0 0 24 24">
         <path xmlns="http://www.w3.org/2000/svg" transform="scale(0.1)"
               d="M92,96a4.0002,4.0002,0,0,1,4-4h64a4,4,0,0,1,0,8H96A4.0002,4.0002,0,0,1,92,96Zm4,36h64a4,4,0,0,0,0-8H96a4,4,0,0,0,0,8Zm32,24H96a4,4,0,0,0,0,8h32a4,4,0,0,0,0-8ZM220,48V156.68652a11.92221,11.92221,0,0,1-3.51514,8.48536l-51.313,51.31347A11.92174,11.92174,0,0,1,156.68652,220H48a12.01375,12.01375,0,0,1-12-12V48A12.01375,12.01375,0,0,1,48,36H208A12.01375,12.01375,0,0,1,220,48ZM48,212H156V159.99219a3.99988,3.99988,0,0,1,4-4h52V48a4.00458,4.00458,0,0,0-4-4H48a4.00458,4.00458,0,0,0-4,4V208A4.00458,4.00458,0,0,0,48,212Zm158.35107-48.00781H164v42.35058Z"/>
     </svg>
 </button>
-
 
 <div id="filterMenu" class="container position-absolute ml-5" style="top: 55px">
     <div class="filter-block" style="display: none">
@@ -60,7 +58,7 @@
             <div class="menu-slider" id="mileage-slider"></div>
         </label>
     </div>
-    <div class="filter-block">
+    <div class="filter-block" style="display: none">
         <label> Filter by fuel type: <br>
             <select id="fuel-type" class="fuel-control">
                 <option selected value="All">All</option>
@@ -194,11 +192,11 @@
                 <label><input type="checkbox" name="manufacturerName" value="Skoda" onclick="handleCheckbox(this)">
                     Skoda</label>
             </div>
-            <div class="row cn">
-                <label><input type="checkbox" name="manufacturerName" value="Aiways,BYD,JAC,ZhiDou"
-                              onclick="handleCheckbox(this)"> Chinees
-                    car brands</label>
-            </div>
+            <!--            <div class="row cn">-->
+            <!--                <label><input type="checkbox" name="manufacturerName" value="Aiways,BYD,JAC,ZhiDou"-->
+            <!--                              onclick="handleCheckbox(this)"> Chinees-->
+            <!--                    car brands</label>-->
+            <!--            </div>-->
             <div class="row se">
                 <label><input type="checkbox" name="manufacturerName" value="volvo" onclick="handleCheckbox(this)">
                     Volvo</label>
@@ -255,140 +253,80 @@
         </button>
         <div class="about-pop-up2">
             <div>
-                <p>
-                    In June I conducted an extensive web scrape on the databases of two of the major websites I know of
-                    that
-                    are
-                    dedicated to selling used cars, willhaben.at and autoscoute24.com.</p>
-                <p>
-                    The data arrived at a quiet wage, users have often submitted their cars on the website to sell with
-                    very
-                    little
-                    or
-                    wrong information. The formatting of the mileage counter on the cars have been awkwardly different,
-                    the
-                    engine
-                    strength of cars have been varying suspiciously a lot within the many of the same models of a given
-                    car
-                    brand.
-                    Initially, on each website I was looking for the following information:
-                </p>
-                <ol>
-                    <li>manufacturer</li>
-                    <li>model</li>
-                    <li>mileage (km)</li>
-                    <li>engine power (hp)</li>
-                    <li>date of manufacturing</li>
-                    <li>fuel type (gasoline, diesel, electric, hybrid ect.)</li>
-                    <li>gears type (manual/automatic)</li>
-                    <li>price (€)</li>
-                    <li>seller location (country code, town, postal code)</li>
-                    <li>seller name</li>
-                </ol>
-                <p>
-                    Throughout a month using various python packages<span style="font-size: 0.55em">1</span> , my
-                    webscraper
-                    returned 170,000 used car advertisments
-                    people
-                    submitted in different European countries. Disclaimer: willhaben.at returned a disproportionate
-                    amount
-                    of
-                    Austrian
-                    advertisements, until I scrape at least as much used car ads (adjusted to population and GDP
-                    difference)
-                    from
-                    neighboring countries too, the represented data carries a bias and is mostly accurate within Austria
-                </p>
-                <p>
-                    To clean the gathered database of nan values and accidental duplicates, I used pandas. Pandas’
-                    toolset
-                    was
-                    proven to be extremely useful in enriching the data, the following assumptions were made to fill in
-                    missing
-                    values from
-                    data rows:
-                </p>
+                <h1>Exploring European Used Car Market Data</h1>
+
+                <p>As a data analyst, I embarked on a fascinating project to explore and analyze the European used car
+                    market. This project involved web scraping data from two prominent websites, willhaben.at and
+                    autoscoute24.com, dedicated to selling used cars. The goal was to gain insights into the popularity
+                    and characteristics of various car brands across Europe. The project encompassed a variety of data
+                    collection, preprocessing, and visualization tasks.</p>
+
+                <h2>Data Collection</h2>
+
+                <p>My journey began in June, where I conducted an extensive web scraping operation to gather information
+                    from these websites. The data presented several challenges, including inconsistent and often
+                    inaccurate information provided by users. I targeted the extraction of critical data points,
+                    including manufacturer, model, mileage (in kilometers), engine power (in horsepower), manufacturing
+                    date, fuel type (such as gasoline, diesel, electric, hybrid, etc.), gears type (manual/automatic),
+                    price (in euros), seller location (comprising the country code, town, and postal code), and seller
+                    names.</p>
+
+                <h2>Data Preprocessing</h2>
+
+                <p>The collected data required thorough cleaning and preprocessing. To tackle this, I utilized the
+                    powerful Pandas library. Key assumptions were made to fill in missing values:</p>
+
                 <ul>
-                    <li>cars of the same manufacturer and model have the same fuel type</li>
-                    <li>cars of the same manufacturer and model should have their engine power similar to the mean of
-                        the
-                        same
-                        car
-                        type +/- the standard deviation of the same car engine power of the same car types
+                    <li>Cars of the same manufacturer and model were assumed to have the same fuel type.</li>
+                    <li>For engine power, cars of the same manufacturer and model were aligned to the mean value for the
+                        same car type, within the range of the standard deviation of engine power for that specific car
+                        type.
                     </li>
-                    <li>cars of the same manufacturer and model have an identical gears type</li>
-                </ul>
-                <p>
-                    the following actions were also necessary to clean the data and optimize its usability: </p>
-                <ul>
-                    <li>advertisements with missing manufacturer or location values are dropped</li>
-                    <li>Italian city names have had the postal code of the city attached in front of the city name, they
-                        had
-                        to
-                        be
-                        separated
-                    </li>
-                    <li>Dutch city names had the short letters of the region where the city is found in attached in
-                        front of
-                        the
-                        city name, they needed to be separated
-                    </li>
-                    <li>many advertisements have arrived with non-breaking spaces, non-breaking spaces are meant to be
-                        invisible,
-                        they caused different types of type errors
-                    </li>
+                    <li>Uniformity in gear type was assumed for cars of the same manufacturer and model.</li>
                 </ul>
 
+                <p>Several other actions were taken to optimize the data:</p>
 
-                <p>
-                    after it became clear that the focus of my project is a density map of the different car brands in
-                    Europe,
-                    the
-                    city
-                    names and their postal codes needed to be matched up with latitude and longitude coordinates, so the
-                    density
-                    map
-                    can
-                    be overlaid on a map. The only free and reliable source of information I could find was an open
-                    source
-                    api
-                    called
-                    geo-py. Geo-py returned the value pair I was looking for, and it only needed a town name and a two
-                    letter
-                    country
-                    code. After manually cross-examining its accuracy by checking the returned values on a map, I
-                    decided to
-                    use
-                    it.
-                    Unfortunately, the api had a limit of 1 call/second. I needed to set up a function that keeps a log
-                    of
-                    the
-                    values
-                    that have already been paired up with lat-long values once, so the geo-py api doesn't need to answer
-                    a
-                    call
-                    for
-                    all
-                    the 170,000 entries. This way, the time it took to pair every occurring town in the database with
-                    lat-long
-                    values
-                    were reduced from 48 hours to just 3.
-                </p>
-                <ul class="footnotes">
-                    <p>1:</p>
-                    <li>PlayWright to scrape javascript based sites too</li>
-                    <li>Selenyum to parse the returned html code as fast as
-                        possible
-                    </li>
-                    <li>sql_model to store the data in a lightweight database</li>
-                    <li>Insomnia was used to craft a request that tricks the back-end
-                        of willhaben.at into thinking, a front-end is making a request to display advertisements. The
-                        returned
-                        json
-                        message
-                        contained every information I was looking for.
-                    </li>
+                <ul>
+                    <li>Advertisements with missing manufacturer or location values were removed.</li>
+                    <li>For Italian city names, postal codes were separated from the city names.</li>
+                    <li>Dutch city names were processed to separate regional abbreviations from the city names.</li>
+                    <li>Non-breaking spaces were addressed to eliminate various types of typing errors.</li>
                 </ul>
+
+                <h2>Data Enrichment and Mapping</h2>
+
+                <p>As the project evolved, the primary focus shifted towards creating a density map that visualized the
+                    distribution of different car brands across Europe. To achieve this, the city names and their postal
+                    codes needed to be mapped to latitude and longitude coordinates. I employed the open-source geo-py
+                    API, which proved to be a reliable resource. To maximize efficiency, I developed a function to keep
+                    track of previously paired town names and lat-long values, significantly reducing processing
+                    time.</p>
+
+                <h2>Backend Setup and API</h2>
+
+                <p>To provide a seamless user experience and circumvent the need to download the entire CSV file
+                    containing all scraped data when visiting the site, I set up a backend using Python's FastAPI. This
+                    backend offers a URL that answers calls containing selected car brands from the website, allowing
+                    users to access specific data efficiently.</p>
+
+                <h2>Key Skills and Tools</h2>
+
+                <p>This project allowed me to hone various skills, such as web scraping using Playwright and Selenium,
+                    data preprocessing with Pandas, database management with sql, and crafting requests with
+                    tools like Insomnia. The ability to develop solutions for data cleaning, enrichment, and
+                    visualization was at the core of this project, demonstrating my proficiency in data analysis and
+                    problem-solving.</p>
+
+                <h2>Conclusion</h2>
+
+                <p>Exploring and analyzing the European used car market data was a rewarding endeavor. The project
+                    illuminated the challenges of dealing with real-world data and demonstrated the importance of data
+                    preprocessing to derive meaningful insights. The density map generated from this data provides a
+                    unique perspective on the popularity of car brands in Europe. The skills and techniques developed
+                    during this project are invaluable for a data analyst, and the insights gained can be leveraged to
+                    make data-driven decisions in the automotive industry.</p>
+
             </div>
         </div>
     </div>
@@ -401,7 +339,6 @@
 </body>
 
 <!--External JS libraries-->
-
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <!--<script src="https://unpkg.com/topojson-client@3"></script>-->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -425,11 +362,5 @@
 <script src="js/hex-pattern.js"></script>
 <script src="js/pie_main.js"></script>
 <script src="js/site-logic.js"></script>
-
-<script>
-
-
-
-</script>
 </html>
 

@@ -85,22 +85,22 @@ function addPie(dataIn) {
         const pieDiv = d3.select("#pie-chart-area")
             .append('div')
             .attr('class', 'pieDiv')
-
+        console.log(carManufacturer)
         const pieTitle = pieDiv.append("div")
             .attr("class", "pie-title")
 
         pieTitle.append('svg')
             .attr("height", "100%")
             .attr("width", "100%")
-            .attr("viewBox","0 0 100 100")
+            .attr("viewBox", "0 0 100 100")
             .style("max-height", "30px")
             .style("max-width", "30px")
             .append("path")
-            .attr("d","M50 2.5 L95 25 L95 75 L50 97.5 L5 75 L5 25 Z")
+            .attr("d", "M50 2.5 L95 25 L95 75 L50 97.5 L5 75 L5 25 Z")
             .attr("class", `${carManufacturer}-path`)
 
 
-        pieTitle.append('p').text(carManufacturer)
+        pieTitle.append('p').html(`${formatCarName(carManufacturer)}<span style="font-size: 15px; font-weight:100; font-style: italic;">: ${data.length}</span>`)
             .attr("class", "smaller-legend-title")
 
         const pieSvg = pieDiv.append("svg")
@@ -160,7 +160,7 @@ function addPie(dataIn) {
     // ADDING LEGEND
     const pieLegendSvg = d3.select("#pie-chart-area").append("svg")
         .attr("width", 90)
-        .attr("height", 180)
+        .attr("height", 220)
         .attr("class", "pie-legend-svg")
 
     let legends = pieLegendSvg.append("g")
@@ -187,4 +187,15 @@ function addPie(dataIn) {
     legend.attr("opacity", 0)
         .transition().duration(300).delay((d, i) => i * 200)
         .attr("opacity", 1)
+}
+
+
+function formatCarName(carName) {
+    carName = carName.replace(/_/g, '-');
+
+    carName = carName.replace(/\b\w/g, function (match) {
+        return match.toUpperCase();
+    });
+
+    return carName;
 }
