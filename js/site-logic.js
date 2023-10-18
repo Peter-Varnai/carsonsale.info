@@ -57,7 +57,7 @@ const filterButton = document.getElementById("filterButton")
 const filterMenu = document.getElementById("filterMenu")
 
 filterButton.addEventListener("click", function () {
-    filterMenu.classList.toggle("openned")
+    filterMenu.classList.toggle("hidden")
 })
 
 
@@ -71,12 +71,16 @@ function handleCheckbox(checked) {
     }
     let selectedNames = [];
     let checkboxes = document.getElementsByName("manufacturerName");
-
+    // if (checked.checked === true && ) {
+    //     console.log('checked is true')
+    // }
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
             selectedNames.push(checkboxes[i].value);
         }
     }
+    console.log(selectedNames)
+
     if (selectedNames.length > 2) {
         for (const checkbox of checkboxes) {
             if (checkbox.checked && checkbox.value !== clickedCheckbox) {
@@ -86,7 +90,11 @@ function handleCheckbox(checked) {
             }
         }
     }
-
+    if (selectedNames.length === 0) {
+        console.log("CHECKED IS TTRUE")
+        checked.checked = true
+        selectedNames.push(clickedCheckbox)
+    }
     selectedNames = selectedNames.map(name => name.toLowerCase())
     let selectedCheckboxes = selectedNames.join(",")
     update(selectedCheckboxes)
