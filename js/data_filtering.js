@@ -45,9 +45,6 @@ function update(selectedBrands) {
     })
 }
 
-function hideLoadingIndicator() {
-    document.getElementById('load-wrapp').classList.add('hidden');
-}
 
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
@@ -59,12 +56,20 @@ function getRandomColor() {
 }
 
 function showLoadingIndicator() {
-    const randomFillPaths = document.querySelectorAll('.random-fill');
+    document.getElementById('filterMenu').classList.add('hidden')
+    document.getElementById('pie-chart-area').style.display = "none"
+    const randomFillPaths = document.querySelectorAll('.random-fill')
     randomFillPaths.forEach(path => {
-        const randomColor = getRandomColor();
-        path.style.fill = randomColor;
+        const randomColor = getRandomColor()
+        path.style.fill = randomColor
     })
-    document.getElementById('load-wrapp').classList.remove('hidden');
+    document.getElementById('load-wrapp').classList.remove('hidden')
+}
+
+function hideLoadingIndicator() {
+    document.getElementById('load-wrapp').classList.add('hidden')
+    document.getElementById('filterMenu').classList.remove('hidden')
+    document.getElementById('pie-chart-area').style.display = "flex"
 }
 
 function dataFilMenu(mValue, filterCol, data) {

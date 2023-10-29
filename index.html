@@ -6,7 +6,11 @@
     <!--    Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&display=swap"
           rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -73,7 +77,8 @@
         </label>
         <div class="row">
             <div class="row de">
-                <label><input type="checkbox" name="manufacturerName" value="audi" onclick="handleCheckbox(this)"> Audi</label>
+                    <label><input type="checkbox" name="manufacturerName" value="audi" onclick="handleCheckbox(this)">
+                        Audi</label>
                 <label><input type="checkbox" name="manufacturerName" value="bmw" checked
                               onclick="handleCheckbox(this)"> BMW</label>
                 <label><input type="checkbox" name="manufacturerName" value="mercedes_benz"
@@ -215,6 +220,8 @@
         <!--        <button type="button" onclick="uncheckAllCheckboxes()">Uncheck All Checkboxes</button>-->
     </div>
 </div>
+
+
 <!--LOADING ANIMATION-->
 <div id="load-wrapp" class="load-wrapp">
     <p class="lading-title">carsonsale.info</p>
@@ -272,7 +279,9 @@
                     including manufacturer, model, mileage (in kilometers), engine power (in horsepower), manufacturing
                     date, fuel type (such as gasoline, diesel, electric, hybrid, etc.), gears type (manual/automatic),
                     price (in euros), seller location (comprising the country code, town, and postal code), and seller
-                    names. An excerpt of the raw data can be viewed <a target="_blank" href="https://docs.google.com/spreadsheets/d/1xZWLUV_lt2jQrQ1zkI3C4vJR1GhG2-VRizMcDlilgXg/edit?usp=sharing">here</a>.</p>
+                    names. An excerpt of the raw data can be viewed <a target="_blank"
+                                                                       href="https://docs.google.com/spreadsheets/d/1xZWLUV_lt2jQrQ1zkI3C4vJR1GhG2-VRizMcDlilgXg/edit?usp=sharing">here</a>.
+                </p>
 
                 <h2 class="about-headline">Data Preprocessing</h2>
 
@@ -341,6 +350,8 @@
 <div id="data-description"></div>
 </body>
 
+
+
 <!--External JS libraries-->
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <!--<script src="https://unpkg.com/topojson-client@3"></script>-->
@@ -358,8 +369,9 @@
 <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
 <script src="js/topo-json.js"></script>
 
+
+
 <!--Custom JS -->
-<script src="js/data-descr-about.js"></script>
 <script src="js/data_filtering.js"></script>
 <script src="js/map_main.js"></script>
 <script src="js/hex-pattern.js"></script>
