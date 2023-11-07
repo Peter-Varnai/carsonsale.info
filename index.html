@@ -77,8 +77,8 @@
         </label>
         <div class="row">
             <div class="row de">
-                    <label><input type="checkbox" name="manufacturerName" value="audi" onclick="handleCheckbox(this)">
-                        Audi</label>
+                <label><input type="checkbox" name="manufacturerName" value="audi" onclick="handleCheckbox(this)">
+                    Audi</label>
                 <label><input type="checkbox" name="manufacturerName" value="bmw" checked
                               onclick="handleCheckbox(this)"> BMW</label>
                 <label><input type="checkbox" name="manufacturerName" value="mercedes_benz"
@@ -265,79 +265,42 @@
             <div>
                 <h1 class="about-headline">Exploring European Used Car Market Data</h1>
 
-                <p>As a data analyst, I embarked on a fascinating project to explore and analyze the European used car
-                    market. This project involved web scraping data from two prominent websites, willhaben.at and
-                    autoscoute24.com, dedicated to selling used cars. The goal was to gain insights into the popularity
-                    and characteristics of various car brands across Europe. The project encompassed a variety of data
-                    collection, preprocessing, and visualization tasks.</p>
-
-                <h2 class="about-headline">Data Collection</h2>
-
-                <p>My journey began in June, where I conducted an extensive web scraping operation to gather information
-                    from these websites. The data presented several challenges, including inconsistent and often
-                    inaccurate information provided by users. I targeted the extraction of critical data points,
-                    including manufacturer, model, mileage (in kilometers), engine power (in horsepower), manufacturing
-                    date, fuel type (such as gasoline, diesel, electric, hybrid, etc.), gears type (manual/automatic),
-                    price (in euros), seller location (comprising the country code, town, and postal code), and seller
-                    names. An excerpt of the raw data can be viewed <a target="_blank"
-                                                                       href="https://docs.google.com/spreadsheets/d/1xZWLUV_lt2jQrQ1zkI3C4vJR1GhG2-VRizMcDlilgXg/edit?usp=sharing">here</a>.
+                <p>Welcome to carsonsale.info, the programmer portfolio project of Peter Varnai. This project involved
+                    web scraping data from well-known second hand car websites, to gain
+                    insights into car brand popularity across Europe.
+                    This data posed challenges due to
+                    inconsistencies and inaccuracies introduced by
+                    users of the websites. My focus was on extracting important data points, a sample of the raw
+                    data can be found <a target="_blank"
+                                         href="https://docs.google.com/spreadsheets/d/1xZWLUV_lt2jQrQ1zkI3C4vJR1GhG2-VRizMcDlilgXg/edit?usp=sharing">here</a>.
                 </p>
 
-                <h2 class="about-headline">Data Preprocessing</h2>
-
-                <p>The collected data required thorough cleaning and preprocessing. To tackle this, I utilized the
-                    powerful Pandas library. Key assumptions were made to fill in missing values:</p>
-
-                <ul>
-                    <li>Cars of the same manufacturer and model were assumed to have the same fuel type.</li>
-                    <li>For engine power, cars of the same manufacturer and model were aligned to the mean value for the
-                        same car type, within the range of the standard deviation of engine power for that specific car
-                        type.
-                    </li>
-                    <li>Uniformity in gear type was assumed for cars of the same manufacturer and model.</li>
-                </ul>
-
-                <p class="about-headline">Several other actions were taken to optimize the data:</p>
-
-                <ul>
-                    <li>Advertisements with missing manufacturer or location values were removed.</li>
-                    <li>For Italian city names, postal codes were separated from the city names.</li>
-                    <li>Dutch city names were processed to separate regional abbreviations from the city names.</li>
-                    <li>Non-breaking spaces were addressed to eliminate various types of typing errors.</li>
-                </ul>
 
                 <h2 class="about-headline">Data Enrichment and Mapping</h2>
 
-                <p>As the project evolved, the primary focus shifted towards creating a density map that visualized the
-                    distribution of different car brands across Europe. To achieve this, the city names and their postal
-                    codes needed to be mapped to latitude and longitude coordinates. I employed the open-source geo-py
-                    API, which proved to be a reliable resource. To maximize efficiency, I developed a function to keep
-                    track of previously paired town names and lat-long values, significantly reducing processing
-                    time.</p>
+                <p>As the project evolved, my primary focus shifted to creating a density map that visualizes the
+                    distribution of car brands across Europe. To achieve this, I used an open-source geolocation API to
+                    map city names and postal codes to latitude and longitude coordinates.</p>
 
                 <h2 class="about-headline">Backend Setup and API</h2>
 
-                <p>To provide a seamless user experience and circumvent the need to download the entire CSV file
-                    containing all scraped data when visiting the site, I set up a backend using Python's FastAPI. This
-                    backend offers a URL that answers calls containing selected car brands from the website, allowing
-                    users to access specific data efficiently.</p>
+                <p>I developed a FastAPI backend with an endpoint to receive from the front end the list of car brands the user would like
+                    to see, querying the database amassed by webscarping and returns the requested data precisely formatted
+                    to align with the expectations of
+                    the data visualizer library on the front end, ensuring seamless data presentation.</p>
 
                 <h2 class="about-headline">Key Skills and Tools</h2>
 
-                <p>This project allowed me to hone various skills, such as web scraping using Playwright and Selenium,
-                    data preprocessing with Pandas, database management using sql_model, and crafting requests with
-                    tools like Insomnia. The ability to develop solutions for data cleaning, enrichment, and
-                    visualization was at the core of this project, demonstrating my proficiency in data analysis and
+                <p>This project honed my skills in database management, web scraping, data preprocessing and crafting
+                    requests with tools like Insomnia. It showcased my ability to develop solutions for data cleaning,
+                    enrichment and visualization, demonstrating my abilities of data analysis, backend development and
                     problem-solving.</p>
 
                 <h2 class="about-headline">Conclusion</h2>
 
-                <p>Exploring and analyzing the European used car market data was a rewarding endeavor. The project
-                    illuminated the challenges of dealing with real-world data and demonstrated the importance of data
-                    preprocessing to derive meaningful insights. The density map generated from this data provides a
-                    unique perspective on the popularity of car brands in Europe. The skills and techniques developed
-                    during this project are invaluable for a data analyst, and the insights gained can be leveraged to
-                    make data-driven decisions in the automotive industry.</p>
+                <p>Exploring and analyzing European used car market data revealed the challenges of working with
+                    real-world data and emphasized the significance of data preprocessing for meaningful insights. The
+                    resulting density map offers a unique perspective on car brand popularity in Europe.</p>
 
             </div>
         </div>
@@ -349,7 +312,6 @@
 <div id="pie-chart-area"></div>
 <div id="data-description"></div>
 </body>
-
 
 
 <!--External JS libraries-->
@@ -368,7 +330,6 @@
 <script src="https://d3js.org/d3-hexbin.v0.2.min.js"></script>
 <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
 <script src="js/topo-json.js"></script>
-
 
 
 <!--Custom JS -->

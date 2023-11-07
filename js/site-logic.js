@@ -46,7 +46,7 @@ const dataDescDiv = d3.select("#data-description")
 const dataDescN = dataDescDiv.append("p")
 
 dataDescDiv.append("p")
-    .html("Between <br>June and July of 2023 <br>web scraped from <span style='font-style: italic;'>willhaben.at</span> and <span style='font-style: italic;'>autoscout24.com</span>")
+    .html("Between <br>June and July of 2023 <br>web scraped from <span style='font-style: italic;'>'wh.at'</span> and <span style='font-style: italic;'>'as24.com'</span>")
 
 function dataDesc(n) {
     dataDescN.html(`Number of cars on screen: <br><span style="font-size: 1.25em; font-weight: bold">${n} / 171032</span>`)
