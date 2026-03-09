@@ -1,0 +1,92 @@
+.arbitrage-controls {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  max-width: 320px;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.control-group label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.chip {
+  padding: 3px 8px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: white;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.chip:hover {
+  border-color: #999;
+}
+
+.chip.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+.stats-summary {
+  display: flex;
+  gap: 12px;
+  padding-left: 10px;
+  border-left: 1px solid #eee;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 9px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.loading-overlay {
+  color: #666;
+  font-size: 11px;
+  padding: 4px 0;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 11px;
+  padding: 4px 0;
+}

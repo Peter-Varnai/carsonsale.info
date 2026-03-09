@@ -1,0 +1,51 @@
+.arbitrage-legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+  max-height: 15vh;
+}
+
+.legend-title {
+  font-size: 10px;
+  font-weight: 600;
+  color: #374151;
+  text-align: center;
+  max-width: 80px;
+}
+
+.legend-gradient {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-gradient::before {
+  content: '';
+  width: 12px;
+  height: 60px;
+  border-radius: 6px;
+  background: linear-gradient(to bottom, #ffffcc, #081d58);
+}
+
+.legend-label {
+  font-size: 9px;
+  font-weight: 500;
+}
+
+.legend-label.low {
+  color: #ffffcc;
+}
+
+.legend-label.high {
+  color: #081d58;
+}

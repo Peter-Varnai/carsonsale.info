@@ -1,0 +1,18 @@
+{
+  "builds": [
+    {
+      "src": "dist/main.js",
+      "use": "@vercel/nestjs",
+      "config": {
+        "forceBuild": true
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/main.js",
+      "methods": ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"]
+    }
+  ]
+}

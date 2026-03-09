@@ -1,0 +1,27 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #f0f2f5;
+  padding: 0;
+}
+
+.app-nav {
+  display: flex;
+  gap: 16px;
+  padding: 12px 20px;
+  background: #1e293b;
+}
+
+.nav-link {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background: #334155;
+}
